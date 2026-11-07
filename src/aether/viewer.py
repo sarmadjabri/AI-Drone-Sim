@@ -1,8 +1,14 @@
 """Optional Panda3D viewer for the physical quadrotor simulation."""
 
 import math
+import warnings
 
 import numpy as np
+
+try:
+    import pygame
+except ImportError:  # pragma: no cover - optional runtime dependency
+    pygame = None
 
 from .simulation import Simulation
 
@@ -64,6 +70,7 @@ def run_viewer(simulation, duration):
             self.camera_distance = 11.0
             self.manual_target = simulation.drone.state.position.copy()
             self.keys = {key: False for key in ("w", "a", "s", "d", "r", "f")}
+            self.controller = self._init_controller()
             for key in self.keys:
                 self.accept(key, self._set_key, [key, True])
                 self.accept(f"{key}-up", self._set_key, [key, False])
@@ -161,6 +168,46 @@ def run_viewer(simulation, duration):
             lines.drawTo(*end)
             self.render.attachNewNode(lines.create())
 
+        def _init_controller(self):
+            if pygame is None:
+                return None
+            try:
+                pygame.init()
+                pygame.joystick.init()
+                if pygame.joystick.get_count() == 0:
+                    return None
+                joystick = pygame.joystick.Joystick(0)
+                joystick.init()
+                return joystick
+            except pygame.error as exc:
+                warnings.warn(
+                    f"Could not initialize the game controller; using keyboard input: {exc}",
+                    RuntimeWarning,
+                    stacklevel=2,
+                )
+                return None
+
+        def _controller_delta(self):
+            if self.controller is None:
+                return np.zeros(3)
+            try:
+                pygame.event.get()
+                axes = [self.controller.get_axis(i) for i in range(self.controller.get_numaxes())]
+            except pygame.error as exc:
+                warnings.warn(
+                    f"Game controller disconnected; using keyboard input: {exc}",
+                    RuntimeWarning,
+                    stacklevel=2,
+                )
+                self.controller = None
+                return np.zeros(3)
+            # DualSense mapping for the current position-target controller:
+            # left stick x/y -> X/Y motion, right stick y -> Z motion
+            x = float(np.clip(axes[0] if len(axes) > 0 else 0.0, -1.0, 1.0))
+            y = float(np.clip(axes[1] if len(axes) > 1 else 0.0, -1.0, 1.0))
+            z = float(np.clip(-axes[3] if len(axes) > 3 else 0.0, -1.0, 1.0))
+            return np.array([x, -y, z], dtype=float) * 2.0
+
         def _set_key(self, key, value):
             self.keys[key] = value
 
@@ -223,7 +270,7 @@ def run_viewer(simulation, duration):
                 simulation_dt = wall_dt * self.time_scale
                 if self.manual:
                     speed = 2.0 * simulation_dt
-                    delta = (
+                    keyboard_delta = (
                         np.array(
                             [
                                 float(self.keys["d"]) - float(self.keys["a"]),
@@ -233,6 +280,10 @@ def run_viewer(simulation, duration):
                         )
                         * speed
                     )
+                    controller_delta = self._controller_delta() * simulation_dt
+                    delta = keyboard_delta + controller_delta
+                    if np.any(np.abs(controller_delta) > 0):
+                        delta = controller_delta
                     self.manual_target = self.manual_target + delta
                     simulation.target = self.manual_target.copy()
                 for _ in range(max(1, round(simulation_dt / simulation.scenario.dt))):
@@ -263,9 +314,10 @@ def run_viewer(simulation, duration):
                 else ("MISSION COMPLETE" if simulation.completed else "FLYING")
             )
             mode = "MANUAL" if self.manual else "AUTONOMOUS"
+            controller_status = "controller" if self.controller is not None else "keyboard"
             self.telemetry.setText(
                 f"{status}  |  {mode}  |  {self.elapsed:5.1f}/{self.max_duration:.1f} s"
-                f"  |  {self.time_scale:g}x\n"
+                f"  |  {self.time_scale:g}x  |  {controller_status}\n"
                 f"position  {state.position[0]:6.2f}, {state.position[1]:6.2f}, "
                 f"{state.position[2]:5.2f} m\n"
                 f"velocity  {np.linalg.norm(state.velocity):5.2f} m/s"
