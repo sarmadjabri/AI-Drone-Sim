@@ -25,7 +25,7 @@ void AAetherHUD::DrawHUD()
         TEXT("Motor thrust (N): %4.1f  %4.1f  %4.1f  %4.1f\n")
         TEXT("Collective (N): %5.1f / %5.1f\n")
         TEXT("%s\n")
-        TEXT("Triangle/V: switch view  |  Square/Backspace: reset\n")
+        TEXT("Triangle/V: switch view  |  Square/Backspace: reset  |  F11: fullscreen\n")
         TEXT("%s"),
         *Drone->GetViewModeName(),
         PositionMeters.X, PositionMeters.Y, PositionMeters.Z,

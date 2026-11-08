@@ -75,6 +75,8 @@ def run_viewer(simulation, duration):
                 self.accept(key, self._set_key, [key, True])
                 self.accept(f"{key}-up", self._set_key, [key, False])
             self.accept("escape", self.userExit)
+            self.accept("f11", self._toggle_fullscreen)
+            self.accept("alt-enter", self._toggle_fullscreen)
             self.accept("space", self._toggle_pause)
             self.accept("m", self._toggle_manual)
             self.accept("backspace", self._reset)
@@ -100,7 +102,8 @@ def run_viewer(simulation, duration):
             )
             OnscreenText(
                 text="WASD + R/F: manual target  |  M: auto/manual  |  Space: pause"
-                "  |  Arrows: orbit  |  1-5: time scale  |  Backspace: reset",
+                "  |  Arrows: orbit  |  1-5: time scale  |  F11: fullscreen"
+                "  |  Backspace: reset",
                 pos=(0, -0.94),
                 scale=0.038,
                 align=0,
@@ -248,6 +251,11 @@ def run_viewer(simulation, duration):
 
         def _set_time_scale(self, scale):
             self.time_scale = scale
+
+        def _toggle_fullscreen(self):
+            properties = WindowProperties()
+            properties.setFullscreen(not self.win.getProperties().getFullscreen())
+            self.win.requestProperties(properties)
 
         def _update_path(self):
             path = simulation.path
