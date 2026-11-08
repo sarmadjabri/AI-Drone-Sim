@@ -1,0 +1,9 @@
+F450 Quadcopter model
+
+Source: https://github.com/pavanandrea/QuadcopterFlightSimulator/tree/main/cad
+Original model: f450_quadcopter_lowpoly.obj
+Author: Andrea Pavan
+License: MIT; see LICENSE.
+
+The source model is imported into Content/External/F450Drone. The source OBJ and
+MTL are retained here to support reimporting and attribution.

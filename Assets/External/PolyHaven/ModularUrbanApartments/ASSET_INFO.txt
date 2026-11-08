@@ -1,0 +1,10 @@
+Modular Urban Apartments Facade
+
+Source: https://polyhaven.com/a/modular_urban_apartments_facade
+Creator: James Ray Cock
+License: CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/
+
+The 1K glTF source and FBX package, including referenced textures, are retained
+here. The FBX assets are imported into Content/External/PolyHaven/
+ModularUrbanApartments. Poly Haven's asset library license information is at
+https://polyhaven.com/license.

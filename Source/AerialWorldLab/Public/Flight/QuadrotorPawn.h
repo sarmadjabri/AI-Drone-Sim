@@ -2,17 +2,19 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
+#include "Flight/DroneCameraControllerComponent.h"
 #include "Flight/QuadrotorDynamics.h"
 #include "QuadrotorPawn.generated.h"
 
 class UCameraComponent;
 class UMaterialInterface;
+class UDroneCameraControllerComponent;
 class USpringArmComponent;
 class UStaticMesh;
 class UStaticMeshComponent;
 class UBoxComponent;
 
-UCLASS()
+UCLASS(Config = Game)
 class AERIALWORLDLAB_API AQuadrotorPawn : public APawn
 {
     GENERATED_BODY()
@@ -28,19 +30,48 @@ public:
     float GetMotorThrustNewtons(int32 MotorIndex) const;
     float GetCollectiveThrustNewtons() const;
     float GetMaximumCollectiveThrustNewtons() const;
-    FString GetFlightModeName() const;
-    int32 GetFlightModeIndex() const;
+    FVector2D GetMovementInput() const { return FVector2D(RawForwardInput, RawLateralInput); }
+    bool IsPositionHolding() const { return bHoldingPosition; }
+    bool IsFirstPerson() const { return ViewMode != EDroneViewMode::ThirdPerson; }
+    bool IsWaitingForNeutralInput() const { return bAwaitingNeutralInput; }
+    FString GetViewModeName() const
+    {
+        switch (ViewMode)
+        {
+        case EDroneViewMode::StabilizedFirstPerson:
+            return TEXT("Stabilized FPV");
+        case EDroneViewMode::BodyLockedFirstPerson:
+            return TEXT("Body-Locked FPV");
+        default:
+            return TEXT("3D View");
+        }
+    }
 
 protected:
     virtual void BeginPlay() override;
 
 private:
-    void SetRollInput(float Value);
-    void SetPitchInput(float Value);
+    friend class FFlightChaosStabilityTest;
+    friend class FFlightViewModeTest;
+    friend class FFlightImportedAssetsTest;
+    void ToggleViewMode();
+    void ApplyViewMode();
+    void UpdatePilotInput();
+    void SetPadLeftX(float Value) { PadLeftX = Value; }
+    void SetPadLeftY(float Value) { PadLeftY = Value; }
+    void SetPadRightX(float Value) { PadRightX = Value; }
+    void SetPadRightY(float Value) { PadRightY = Value; }
+    void SetPadTriggers(float Value) { PadTriggers = Value; }
+    void SetKeyboardForward(float Value) { KeyboardForward = Value; }
+    void SetKeyboardLateral(float Value) { KeyboardLateral = Value; }
+    void SetKeyboardYaw(float Value) { KeyboardYaw = Value; }
+    void SetKeyboardThrottle(float Value) { KeyboardThrottle = Value; }
+    void SetFirstPersonKeyboardThrottle(float Value) { FirstPersonKeyboardThrottle = Value; }
+    void SetLateralInput(float Value);
+    void SetForwardInput(float Value);
     void SetYawInput(float Value);
     void SetThrottleInput(float Value);
     void SetCameraZoomInput(float Value);
-    void CycleFlightMode();
     void ResetDrone();
     void ApplyTint(UPrimitiveComponent* Component, const FLinearColor& Color) const;
     float ApplyDeadzone(float Value) const;
@@ -57,6 +88,9 @@ private:
     UPROPERTY(VisibleAnywhere, Category = "Drone")
     TArray<TObjectPtr<UStaticMeshComponent>> PropellerBlades;
 
+    UPROPERTY(VisibleAnywhere, Category = "Drone|Visuals")
+    TArray<TObjectPtr<UStaticMeshComponent>> ImportedDroneParts;
+
     UPROPERTY(VisibleAnywhere, Category = "Drone")
     TObjectPtr<UStaticMeshComponent> NoseCamera;
 
@@ -68,6 +102,31 @@ private:
 
     UPROPERTY(VisibleAnywhere, Category = "Drone")
     TObjectPtr<UCameraComponent> Camera;
+
+    UPROPERTY(VisibleAnywhere, Category = "Drone|Camera")
+    TObjectPtr<UCameraComponent> FirstPersonCamera;
+
+    UPROPERTY(VisibleAnywhere, Category = "Drone|Camera")
+    TObjectPtr<UDroneCameraControllerComponent> FirstPersonCameraController;
+
+    UPROPERTY(VisibleAnywhere, Category = "Drone|Camera")
+    EDroneViewMode ViewMode = EDroneViewMode::ThirdPerson;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Camera", meta = (ClampMin = "60.0", ClampMax = "120.0"))
+    float ThirdPersonFieldOfView = 75.0F;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Camera", meta = (ClampMin = "0.1"))
+    float ThirdPersonCameraPositionLagSpeed = 24.0F;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Camera", meta = (ClampMin = "0.1"))
+    float ThirdPersonCameraRotationLagSpeed = 20.0F;
+
+    bool bUseMappedInput = false;
+    bool bAwaitingNeutralInput = false;
+    float PadLeftX = 0.0F, PadLeftY = 0.0F, PadRightX = 0.0F, PadRightY = 0.0F;
+    float PadTriggers = 0.0F;
+    float KeyboardForward = 0.0F, KeyboardLateral = 0.0F, KeyboardYaw = 0.0F;
+    float KeyboardThrottle = 0.0F, FirstPersonKeyboardThrottle = 0.0F;
 
     UPROPERTY(Transient)
     TObjectPtr<UMaterialInterface> DroneMaterial;
@@ -90,38 +149,68 @@ private:
     UPROPERTY(EditAnywhere, Category = "Drone|Physics", meta = (ClampMin = "0.001"))
     float InertiaZKgMetersSquared = 0.04F;
 
-    UPROPERTY(EditAnywhere, Category = "Drone|Physics", meta = (ClampMin = "1.0"))
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Physics", meta = (ClampMin = "1.0"))
     float MaximumMotorThrustNewtons = 12.0F;
 
-    UPROPERTY(EditAnywhere, Category = "Drone|Physics", meta = (ClampMin = "0.001"))
-    float MotorTimeConstantSeconds = 0.035F;
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Physics", meta = (ClampMin = "0.001"))
+    float MotorTimeConstantSeconds = 0.01F;
 
     UPROPERTY(EditAnywhere, Category = "Drone|Physics", meta = (ClampMin = "0.001"))
     float YawMomentPerNewtonNewtonMeters = 0.018F;
 
-    UPROPERTY(EditAnywhere, Category = "Drone|Control", meta = (ClampMin = "1.0", ClampMax = "45.0"))
-    float MaximumTiltDegrees = 25.0F;
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "1.0", ClampMax = "45.0"))
+    float MaximumTiltDegrees = 38.0F;
 
-    UPROPERTY(EditAnywhere, Category = "Drone|Control", meta = (ClampMin = "0.0"))
-    float AngleGainNewtonMetersPerRadian = 0.8F;
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "1.0", ClampMax = "45.0"))
+    float MaximumBrakingTiltDegrees = 44.0F;
 
-    UPROPERTY(EditAnywhere, Category = "Drone|Control", meta = (ClampMin = "0.0"))
-    float RateDampingNewtonMeterSeconds = 0.22F;
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.0"))
+    float RollAttitudeGainPerSecond = 9.0F;
 
-    UPROPERTY(EditAnywhere, Category = "Drone|Control", meta = (ClampMin = "0.0"))
-    float MaximumYawRateRadiansPerSecond = 1.8F;
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.1"))
+    float MaximumRollRateRadiansPerSecond = 3.0F;
 
-    UPROPERTY(EditAnywhere, Category = "Drone|Control", meta = (ClampMin = "0.0"))
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.0"))
+    float RollRateGainNewtonMeterSeconds = 0.22F;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.0"))
+    float MaximumYawRateRadiansPerSecond = 1.5F;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.0"))
     float YawRateGainNewtonMeterSeconds = 0.12F;
 
-    UPROPERTY(EditAnywhere, Category = "Drone|Control", meta = (ClampMin = "0.0"))
-    float ThrottleRampNewtonsPerSecond = 18.0F;
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.0"))
+    float YawHeadingGainPerSecond = 2.5F;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.1"))
+    float MaximumHorizontalSpeedMetersPerSecond = 10.0F;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.1"))
+    float HorizontalVelocityGainPerSecond = 5.0F;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.1"))
+    float BrakingVelocityGainPerSecond = 8.0F;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.1"))
+    float AccelerationJerkMetersPerSecondCubed = 100.0F;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.1"))
+    float BrakingJerkMetersPerSecondCubed = 160.0F;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.1"))
+    float VerticalSpeedMetersPerSecond = 1.5F;
+
+    UPROPERTY(EditAnywhere, Category = "Drone|Control", meta = (ClampMin = "0.1"))
+    float AltitudePositionGainPerSecondSquared = 2.5F;
+
+    UPROPERTY(EditAnywhere, Category = "Drone|Control", meta = (ClampMin = "0.1"))
+    float AltitudeVelocityGainPerSecond = 3.0F;
 
     UPROPERTY(EditAnywhere, Category = "Drone|Control", meta = (ClampMin = "0.0", ClampMax = "0.5"))
     float StickDeadzone = 0.08F;
 
-    UPROPERTY(EditAnywhere, Category = "Drone|Control", meta = (ClampMin = "0.1"))
-    float StickResponseSpeed = 12.0F;
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.1"))
+    float StickResponseSpeed = 24.0F;
 
     UPROPERTY(EditAnywhere, Category = "Drone|Control", meta = (ClampMin = "0.0"))
     float CameraZoomSpeed = 180.0F;
@@ -129,17 +218,71 @@ private:
     UPROPERTY(EditAnywhere, Category = "Drone|Visuals", meta = (ClampMin = "60.0"))
     float MaximumVisualRotorRpm = 240.0F;
 
-    float RollInput = 0.0F;
-    float PitchInput = 0.0F;
+    // Flight tuning lives here; FlightControl.h contains stateless math only.
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.0"))
+    float PitchAttitudeGainPerSecond = 9.0F;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.0"))
+    float MaximumPitchRateRadiansPerSecond = 3.0F;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.0"))
+    float PitchRateGainNewtonMeterSeconds = 0.22F;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.0"))
+    float VelocityPredictionSeconds = 0.2F;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.0"))
+    float StickReleaseMultiplier = 3.0F;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.0"))
+    float StickExpo = 0.35F;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.0"))
+    float MaximumVerticalAcceleration = 4.0F;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.0"))
+    float MinimumAltitudeMeters = 0.35F;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.0"))
+    float MaximumAltitudeMeters = 50.0F;
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.1"))
+    float CollectiveThrustRampNewtonsPerSecond = 180.0F;
+
+    UPROPERTY(EditAnywhere, Category = "Drone|Stabilizer", meta = (ClampMin = "0.0"))
+    float PositionHoldGainPerSecond = 0.8F;
+
+    UPROPERTY(EditAnywhere, Category = "Drone|Stabilizer", meta = (ClampMin = "0.0"))
+    float PositionHoldMaximumSpeed = 0.5F;
+
+    UPROPERTY(EditAnywhere, Category = "Drone|Stabilizer", meta = (ClampMin = "0.0"))
+    float PositionHoldCaptureSpeed = 0.15F;
+
+    UPROPERTY(EditAnywhere, Category = "Drone|Stabilizer", meta = (ClampMin = "0.0"))
+    float PositionHoldCaptureTiltDegrees = 5.0F;
+
+    // Center must persist before position hold may engage; braking still starts immediately.
+    UPROPERTY(EditAnywhere, Category = "Drone|Stabilizer", meta = (ClampMin = "0.0"))
+    float PositionHoldNeutralDelaySeconds = 0.15F;
+
+    float RawForwardInput = 0.0F;
+    float RawLateralInput = 0.0F;
+    float TranslationNeutralSeconds = 0.0F;
+    bool bHoldingPosition = false;
+    FVector HoldPositionCentimeters = FVector::ZeroVector;
+    FVector HorizontalAccelerationCommand = FVector::ZeroVector;
+    float LateralInput = 0.0F;
+    float ForwardInput = 0.0F;
     float YawInput = 0.0F;
-    float RollInputTarget = 0.0F;
-    float PitchInputTarget = 0.0F;
+    float LateralInputTarget = 0.0F;
+    float ForwardInputTarget = 0.0F;
     float YawInputTarget = 0.0F;
     float ThrottleInput = 0.0F;
     float ThrottleInputTarget = 0.0F;
     float CameraZoomInput = 0.0F;
-    int32 FlightModeIndex = 1;
     FTransform InitialDroneTransform;
+    float AltitudeTargetMeters = 0.0F;
+    float YawTargetDegrees = 0.0F;
     float CollectiveCommandNewtons = 0.0F;
     Aether::MotorThrusts MotorThrustsNewtons{ 0.0F, 0.0F, 0.0F, 0.0F };
 };

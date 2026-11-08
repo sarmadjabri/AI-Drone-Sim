@@ -5,6 +5,7 @@
 #include "AetherGameMode.generated.h"
 
 class AStaticMeshActor;
+class UStaticMesh;
 
 UCLASS()
 class AERIALWORLDLAB_API AAetherGameMode : public AGameModeBase
@@ -22,6 +23,8 @@ protected:
     virtual void BeginPlay() override;
 
 private:
+    friend class FFlightImportedAssetsTest;
+    void SetupEnvironmentLighting();
     AStaticMeshActor* SpawnTestBox(
         const FVector& Location,
         const FVector& Scale,
@@ -32,4 +35,7 @@ private:
         const FLinearColor& FacadeColor,
         int32 Floors,
         int32 WindowColumns);
+
+    UPROPERTY()
+    TObjectPtr<UStaticMesh> ApartmentFacadePanelMesh;
 };

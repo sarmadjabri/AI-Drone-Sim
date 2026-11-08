@@ -13,6 +13,14 @@
     {
       "Name": "AndroidFileServer",
       "Enabled": false
+    },
+    {
+      "Name": "PythonScriptPlugin",
+      "Enabled": false
+    },
+    {
+      "Name": "GLTFImporter",
+      "Enabled": false
     }
   ]
 }
