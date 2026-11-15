@@ -233,3 +233,22 @@ void UDroneCameraControllerComponent::UpdateFirstPersonVisibility()
         }
     }
 }
+
+// User-requested adjustments only; historical body-locked pose calculation is unchanged.
+void UDroneCameraControllerComponent::AdjustGimbalPitch(float Degrees)
+{
+    if (ViewMode == EDroneViewMode::StabilizedFirstPerson)
+        StabilizedPitchDegrees = FMath::Clamp(StabilizedPitchDegrees + Degrees, MinimumGimbalPitchDegrees, MaximumGimbalPitchDegrees);
+}
+void UDroneCameraControllerComponent::AdjustFieldOfView(float Degrees)
+{
+    if (ViewMode == EDroneViewMode::ThirdPerson || !FirstPersonCamera) return;
+    float& Fov = ViewMode == EDroneViewMode::StabilizedFirstPerson ? StabilizedFieldOfView : BodyLockedFieldOfView;
+    Fov = FMath::Clamp(Fov + Degrees, 60.0F, 120.0F);
+    FirstPersonCamera->SetFieldOfView(Fov);
+}
+void UDroneCameraControllerComponent::RecenterGimbal()
+{
+    if (ViewMode == EDroneViewMode::StabilizedFirstPerson) StabilizedPitchDegrees = 0.0F;
+    ResetCameraPose();
+}

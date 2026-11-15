@@ -4,6 +4,8 @@
 #include "GameFramework/Pawn.h"
 #include "Flight/DroneCameraControllerComponent.h"
 #include "Flight/QuadrotorDynamics.h"
+#include "Flight/PilotInput.h"
+#include "Flight/PilotControlsComponent.h"
 #include "QuadrotorPawn.generated.h"
 
 class UCameraComponent;
@@ -26,6 +28,14 @@ public:
     virtual void Tick(float DeltaSeconds) override;
     virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 
+    bool IsManualMode() const { return FlightMode == EDroneFlightMode::Angle || FlightMode == EDroneFlightMode::Acro; }
+    FString GetControlStatus() const;
+    UPilotControlsComponent* GetPilotControls() const { return PilotControls; }
+    FString GetInputProfileName() const;
+    FString GetFlightModeName() const;
+    bool UsesMode2Axes() const;
+    bool IsControllerDisconnected() const { return bControllerDisconnected; }
+    float GetResetProgress() const { return bResetHeld ? FMath::Clamp(ResetHeldSeconds / FMath::Max(ResetHoldSeconds, 0.25F), 0.0F, 1.0F) : 0.0F; }
     FVector GetVelocityMetersPerSecond() const;
     float GetMotorThrustNewtons(int32 MotorIndex) const;
     float GetCollectiveThrustNewtons() const;
@@ -49,9 +59,59 @@ public:
 
 protected:
     virtual void BeginPlay() override;
+    virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
 private:
+    friend class UPilotControlsComponent;
+    friend class FProfessionalControlsTest;
+    friend class FControlSafetyTest;
+    friend class FManualFlightTest;
+    friend class FHighPerformanceTest;
+    bool RequestFlightMode(EDroneFlightMode NewMode);
+    bool IsGrounded() const;
+    void ToggleArm();
+    void RequestTakeoff();
+    void RequestLanding();
+    void AdjustPilotCameraZoom(float Amount);
+    UPROPERTY(VisibleAnywhere) TObjectPtr<UPilotControlsComponent> PilotControls;
+    EMotorState MotorState = EMotorState::Armed;
+    bool bLanding = false;
+    bool bTakeoffRequired = false;
+    FVector CommandedBodyRate = FVector::ZeroVector;
+    FVector CommandedVelocity = FVector::ZeroVector;
+    bool bMotorSaturated = false;
+    float PadLeftTrigger = 0, PadRightTrigger = 0;
+    void SetLeftTrigger(float V) { PadLeftTrigger=V; }
+    void SetRightTrigger(float V) { PadRightTrigger=V; }
+    friend class FFlightPilotProfilesTest;
+    friend class FFlightAssistedModesTest;
     friend class FFlightChaosStabilityTest;
+    void HandleControllerConnection(bool bConnected);
+    FDelegateHandle ConnectionChangedHandle;
+    bool bControllerDisconnected = false;
+    void CycleInputProfile();
+    void CycleFlightMode();
+    void RequireNeutralInput();
+    void BeginResetHold() { bResetHeld = true; ResetHeldSeconds = 0.0F; }
+    void EndResetHold() { bResetHeld = false; ResetHeldSeconds = 0.0F; }
+    void UpdateResetHold(float DeltaSeconds);
+
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Input")
+    EDroneInputProfile InputProfile = EDroneInputProfile::ProfessionalMode2;
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control")
+    EDroneFlightMode FlightMode = EDroneFlightMode::LegacyAssisted;
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Input")
+    bool bInvertForward = false;
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Input")
+    bool bInvertLateral = false;
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Input")
+    bool bInvertYaw = false;
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Input")
+    bool bInvertVertical = false;
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Input", meta = (ClampMin = "0.25"))
+    float ResetHoldSeconds = 1.5F;
+    bool bResetHeld = false;
+    float ResetHeldSeconds = 0.0F;
     friend class FFlightViewModeTest;
     friend class FFlightImportedAssetsTest;
     void ToggleViewMode();
@@ -206,7 +266,7 @@ private:
     UPROPERTY(EditAnywhere, Category = "Drone|Control", meta = (ClampMin = "0.1"))
     float AltitudeVelocityGainPerSecond = 3.0F;
 
-    UPROPERTY(EditAnywhere, Category = "Drone|Control", meta = (ClampMin = "0.0", ClampMax = "0.5"))
+    UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.0", ClampMax = "0.5"))
     float StickDeadzone = 0.08F;
 
     UPROPERTY(EditAnywhere, Config, Category = "Drone|Control", meta = (ClampMin = "0.1"))

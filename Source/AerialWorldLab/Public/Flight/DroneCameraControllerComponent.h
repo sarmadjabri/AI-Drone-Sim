@@ -26,6 +26,9 @@ public:
     void Configure(USceneComponent* DroneBody, UCameraComponent* FirstPersonCamera);
     void SetViewMode(EDroneViewMode NewMode);
     void ResetCameraPose();
+    void AdjustGimbalPitch(float Degrees);
+    void AdjustFieldOfView(float Degrees);
+    void RecenterGimbal();
 
     virtual void TickComponent(
         float DeltaTime,

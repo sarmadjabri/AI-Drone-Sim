@@ -176,6 +176,7 @@ bool FFlightChaosStabilityTest::RunTest(const FString& Parameters)
     World->BeginPlay();
     World->bBegunPlay = true;
     AQuadrotorPawn* Pawn = World->SpawnActor<AQuadrotorPawn>(FVector(0, 0, 2000), FRotator::ZeroRotator);
+    Pawn->FlightMode = EDroneFlightMode::LegacyAssisted;
     TestTrue(TEXT("Chaos uses configured inertia"), Pawn->Body->GetInertiaTensor().Equals(
         FVector(Pawn->InertiaXKgMetersSquared, Pawn->InertiaYKgMetersSquared,
             Pawn->InertiaZKgMetersSquared) * 10000.0, 0.1));
@@ -364,6 +365,8 @@ bool FFlightViewModeTest::RunTest(const FString& Parameters)
 {
     UWorld* World = UWorld::CreateWorld(EWorldType::Game, false);
     AQuadrotorPawn* Pawn = World->SpawnActor<AQuadrotorPawn>();
+    Pawn->FlightMode = EDroneFlightMode::LegacyAssisted;
+    Pawn->InputProfile = EDroneInputProfile::LegacyViewDependent;
     TestFalse(TEXT("Starts in 3D View"), Pawn->IsFirstPerson());
     TestTrue(TEXT("Chase camera is active"), Pawn->Camera->IsActive() && !Pawn->FirstPersonCamera->IsActive());
     Pawn->SetPadLeftY(1.0F);
@@ -482,6 +485,21 @@ bool FFlightViewModeTest::RunTest(const FString& Parameters)
         FRotator(Pawn->FirstPersonCameraController->BodyLockedUptiltDegrees, 0.0F, 0.0F).Quaternion();
     TestTrue(TEXT("Body-locked FPV matches the rigid body and calibrated mount"),
         Pawn->FirstPersonCamera->GetComponentQuat().AngularDistance(ExpectedBodyLockedRotation) < 1.0e-4F);
+    // Reference: 516063db90b7a1311d969ecdb80ff5a140900418. Exact rigid body * mount * uptilt, no lag.
+    for (int Hz : {30,60,120})
+    for (const FRotator Pose : {FRotator(0,179,0),FRotator(45,-179,60),FRotator(-70,90,-100),FRotator(89.9F,0,170)})
+    {
+        Pawn->Body->SetWorldLocationAndRotation(FVector(1000,-800,300),Pose);
+        Pawn->FirstPersonCameraController->UpdateCameraPose(1.0F/Hz);
+        const FQuat Historical = Pawn->Body->GetComponentQuat() *
+            Pawn->FirstPersonCameraController->MountRotation.Quaternion() *
+            FRotator(Pawn->FirstPersonCameraController->BodyLockedUptiltDegrees,0,0).Quaternion();
+        TestTrue(TEXT("Historical body-locked rapid combined rotation, without lag"),
+            Pawn->FirstPersonCamera->GetComponentQuat().AngularDistance(Historical)<1.e-4F);
+        TestTrue(TEXT("Historical mount remains rigid during rapid translation"),
+            Pawn->FirstPersonCamera->GetComponentLocation().Equals(Pawn->Body->GetComponentTransform().TransformPosition(
+                Pawn->FirstPersonCameraController->MountOffsetCentimeters),0.01F));
+    }
     Pawn->ToggleViewMode();
     Pawn->UpdatePilotInput();
     TestTrue(TEXT("Returns to chase camera"), Pawn->Camera->IsActive() && !Pawn->FirstPersonCamera->IsActive());
@@ -492,6 +510,125 @@ bool FFlightViewModeTest::RunTest(const FString& Parameters)
         Pawn->Camera->FieldOfView, Pawn->ThirdPersonFieldOfView);
     TestEqual(TEXT("Physics tuning unchanged by view switch"), Pawn->MaximumHorizontalSpeedMetersPerSecond, 10.0F);
     World->DestroyWorld(false);
+    return true;
+}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FFlightPilotProfilesTest, "Aether.Flight.PilotProfiles",
+    EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
+
+bool FFlightPilotProfilesTest::RunTest(const FString& Parameters)
+{
+    UWorld* World = UWorld::CreateWorld(EWorldType::Game, false);
+    AQuadrotorPawn* Pawn = World->SpawnActor<AQuadrotorPawn>();
+    Pawn->FlightMode = EDroneFlightMode::LegacyAssisted;
+    for (EDroneInputProfile Profile : {EDroneInputProfile::ProfessionalMode2,
+        EDroneInputProfile::Legacy3D, EDroneInputProfile::LegacyFPV})
+    {
+        Pawn->InputProfile = Profile;
+        Pawn->bAwaitingNeutralInput = false;
+        Pawn->SetPadLeftX(0.25F); Pawn->SetPadLeftY(0.5F);
+        Pawn->SetPadRightX(-0.75F); Pawn->SetPadRightY(1.0F);
+        Pawn->SetPadTriggers(-1.0F);
+        Pawn->UpdatePilotInput();
+        const float Forward = Pawn->ForwardInputTarget;
+        const float Right = Pawn->LateralInputTarget;
+        const float Yaw = Pawn->YawInputTarget;
+        const float Vertical = Pawn->ThrottleInputTarget;
+        TestEqual(TEXT("Correct forward stick"), Forward,
+            Pawn->ApplyDeadzone(Profile == EDroneInputProfile::Legacy3D ? 0.5F : 1.0F));
+        TestEqual(TEXT("Correct vertical stick or triggers"), Vertical,
+            Profile == EDroneInputProfile::Legacy3D ? -1.0F : Pawn->ApplyDeadzone(0.5F));
+        for (int View = 0; View < 3; ++View)
+        {
+            Pawn->ToggleViewMode();
+            Pawn->UpdatePilotInput();
+            TestFalse(TEXT("Independent camera switch never inhibits input"), Pawn->bAwaitingNeutralInput);
+            TestEqual(TEXT("Camera preserves pitch command"), Pawn->ForwardInputTarget, Forward);
+            TestEqual(TEXT("Camera preserves roll command"), Pawn->LateralInputTarget, Right);
+            TestEqual(TEXT("Camera preserves yaw command"), Pawn->YawInputTarget, Yaw);
+            TestEqual(TEXT("Camera preserves vertical command"), Pawn->ThrottleInputTarget, Vertical);
+        }
+        Pawn->bInvertForward = Pawn->bInvertLateral = Pawn->bInvertYaw = Pawn->bInvertVertical = true;
+        Pawn->UpdatePilotInput();
+        TestEqual(TEXT("Invert forward"), Pawn->ForwardInputTarget, -Forward);
+        TestEqual(TEXT("Invert lateral"), Pawn->LateralInputTarget, -Right);
+        TestEqual(TEXT("Invert yaw"), Pawn->YawInputTarget, -Yaw);
+        TestEqual(TEXT("Invert vertical"), Pawn->ThrottleInputTarget, -Vertical);
+        Pawn->bInvertForward = Pawn->bInvertLateral = Pawn->bInvertYaw = Pawn->bInvertVertical = false;
+    }
+    Pawn->RequireNeutralInput();
+    Pawn->UpdatePilotInput();
+    TestTrue(TEXT("Held axes cannot clear transition gate"), Pawn->bAwaitingNeutralInput);
+    TestEqual(TEXT("Transition clears old command"), Pawn->ForwardInputTarget, 0.0F);
+    Pawn->PadLeftX = Pawn->PadLeftY = Pawn->PadRightX = Pawn->PadRightY = Pawn->PadTriggers = 0.0F;
+    Pawn->UpdatePilotInput();
+    TestFalse(TEXT("Neutral permits new profile"), Pawn->bAwaitingNeutralInput);
+    TestEqual(TEXT("Centered spring stick means altitude hold"), Pawn->ThrottleInputTarget, 0.0F);
+    Pawn->SetPadLeftY(1.0F);
+    Pawn->BeginResetHold();
+    Pawn->HandleControllerConnection(false);
+    Pawn->UpdatePilotInput();
+    TestTrue(TEXT("Disconnect reported"), Pawn->IsControllerDisconnected());
+    TestEqual(TEXT("Disconnect clears vertical input"), Pawn->ThrottleInputTarget, 0.0F);
+    TestFalse(TEXT("Disconnect cancels reset hold"), Pawn->bResetHeld);
+    Pawn->HandleControllerConnection(true);
+    Pawn->SetPadLeftY(1.0F);
+    Pawn->UpdatePilotInput();
+    TestTrue(TEXT("Reconnect with held input waits for neutral"), Pawn->bAwaitingNeutralInput);
+    Pawn->SetPadLeftY(0.0F);
+    Pawn->UpdatePilotInput();
+    Pawn->ResetHoldSeconds = 1.5F;
+    Pawn->BeginResetHold();
+    Pawn->UpdateResetHold(0.5F);
+    TestTrue(TEXT("Short hold shows progress without resetting"), Pawn->bResetHeld && Pawn->GetResetProgress() > 0.0F);
+    Pawn->EndResetHold();
+    TestEqual(TEXT("Release cancels reset"), Pawn->GetResetProgress(), 0.0F);
+    Pawn->BeginResetHold();
+    Pawn->UpdateResetHold(1.6F);
+    TestFalse(TEXT("Long hold executes once"), Pawn->bResetHeld);
+    TestTrue(TEXT("Reset requires neutral"), Pawn->bAwaitingNeutralInput);
+    const auto Cinematic = Aether::GetAssistedTuning(EDroneFlightMode::Cinematic);
+    const auto Sport = Aether::GetAssistedTuning(EDroneFlightMode::Sport);
+    const auto Training = Aether::GetAssistedTuning(EDroneFlightMode::Training);
+    TestTrue(TEXT("Distinct assisted speed envelopes"), Training.SpeedScale < Cinematic.SpeedScale && Cinematic.SpeedScale < Sport.SpeedScale);
+    TestTrue(TEXT("Cinematic limits jerk independently of tilt"), Cinematic.AccelerationJerk < Sport.AccelerationJerk && Cinematic.TiltLimit < Sport.TiltLimit);
+    World->DestroyWorld(false);
+    return true;
+}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FFlightAssistedModesTest, "Aether.Flight.AssistedModes",
+    EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
+
+bool FFlightAssistedModesTest::RunTest(const FString& Parameters)
+{
+    UWorld* World = UWorld::CreateWorld(EWorldType::Game, false);
+    GEngine->CreateNewWorldContext(EWorldType::Game).SetCurrentWorld(World);
+    World->InitializeActorsForPlay(FURL());
+    World->BeginPlay();
+    World->bBegunPlay = true;
+    AQuadrotorPawn* Pawn = World->SpawnActor<AQuadrotorPawn>(FVector(0, 0, 2000), FRotator::ZeroRotator);
+    for (const auto Mode : {EDroneFlightMode::Cinematic, EDroneFlightMode::Sport, EDroneFlightMode::Training})
+    for (const int32 Hz : {30, 60, 120})
+    {
+        Pawn->FlightMode = Mode;
+        Pawn->ResetDrone();
+        const auto Tuning = Aether::GetAssistedTuning(Mode);
+        for (int Frame = 0; Frame < Hz * 30; ++Frame)
+        {
+            Pawn->SetForwardInput(Frame < Hz * 15 ? 1.0F : 0.0F);
+            ++GFrameCounter;
+            World->Tick(LEVELTICK_All, 1.0F / Hz);
+            if (Frame == Hz * 14)
+            {
+                TestTrue(FString::Printf(TEXT("Mode %d at %d Hz reaches speed"), static_cast<int>(Mode), Hz),
+                    FMath::Abs(Pawn->GetVelocityMetersPerSecond().X -
+                        Pawn->MaximumHorizontalSpeedMetersPerSecond * Tuning.SpeedScale) < 0.5F);
+            }
+        }
+        TestTrue(FString::Printf(TEXT("Mode %d at %d Hz settles after release"), static_cast<int>(Mode), Hz),
+            Pawn->GetVelocityMetersPerSecond().Size2D() < 0.2F);
+        TestTrue(TEXT("Assisted mode retains altitude"), FMath::Abs(Pawn->GetActorLocation().Z - 2000.0F) < 50.0F);
+    }
+    World->DestroyWorld(false);
+    GEngine->DestroyWorldContext(World);
     return true;
 }
 #endif

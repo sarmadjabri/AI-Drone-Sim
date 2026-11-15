@@ -4,9 +4,10 @@ UE_ROOT ?= /home/sarmy/UnrealEngine/UE_5.2
 PROJECT := $(CURDIR)/AerialWorldLab.uproject
 PYTHON ?= .venv/bin/python
 CXX ?= g++
+UE_TEST_FILTER ?= Aether.Flight
 CPP_TEST := /tmp/aether_quadrotor_dynamics_test
 
-.PHONY: help build editor play play-windowed test python-test cpp-test
+.PHONY: help build editor play play-windowed test python-test cpp-test unreal-test
 
 help:
 	@printf '%s\n' \
@@ -47,3 +48,10 @@ cpp-test:
 		Source/AerialWorldLab/Private/Flight/QuadrotorDynamics.cpp \
 		tests/cpp/quadrotor_dynamics_test.cpp -o "$(CPP_TEST)"
 	"$(CPP_TEST)"
+
+# NullRHI validates flight/asset logic, not rendering performance or hardware input.
+unreal-test: build
+	"$(UE_ROOT)/Engine/Binaries/Linux/UnrealEditor" "$(PROJECT)" \
+		-unattended -nop4 -nosound -NullRHI \
+		-ExecCmds="Automation RunTests $(UE_TEST_FILTER); Quit" \
+		-abslog="$(CURDIR)/Saved/Logs/ControllerAutomation.log"
