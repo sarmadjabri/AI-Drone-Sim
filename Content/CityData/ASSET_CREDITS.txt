@@ -1,0 +1,21 @@
+# Default environment assets
+
+The New York-style brownstone neighborhood is authored by NVIDIA and converted
+from the Architectural Brownstone OpenUSD sample pack, AECDemo_NVD@10012.
+This is an artistic scene, not a surveyed replica of Manhattan.
+
+Catalog: https://docs.omniverse.nvidia.com/usd/latest/usd_content_samples/downloadable_packs.html
+Terms: https://docs.omniverse.nvidia.com/platform/latest/common/NVIDIA_Omniverse_License_Agreement.html
+Original package notice is retained at Assets/External/NvidiaBrownstone/PACKAGE-LICENSES/.
+NVIDIA content is incorporated into the simulator, not offered as a standalone asset pack.
+
+The detailed CarConcept vehicle is by Darmstadt Graphics Group / Eric Chadwick
+(2024), CC BY 4.0, derived from Unity Fan's CC0 concept car. The model's original
+Khronos logos retain their applicable trademark terms.
+Source: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/CarConcept
+License: https://creativecommons.org/licenses/by/4.0/
+Adaptation: scene-node transforms baked into a combined native static mesh;
+visual size/orientation fitted to a kinematic collision envelope.
+
+Drone and other retained optional asset notices remain beside their sources in
+Assets/External/. Optional Helsinki/OSM/Kenney environments are not the default city.

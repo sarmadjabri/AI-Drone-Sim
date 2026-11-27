@@ -13,3 +13,30 @@ Saved/
 *.sln
 *.xcodeproj
 *.xcworkspace
+
+# NVIDIA sample sources are reproducible import inputs; do not distribute the pack standalone.
+Assets/External/NvidiaBrownstone/Demos/
+Assets/External/NvidiaBrownstone/prepared/
+Assets/External/NvidiaBrownstone/batched/
+Assets/External/NvidiaBrownstone/prepared_manifest.json
+Assets/External/NvidiaBrownstone/batched_manifest.json
+Assets/External/NvidiaBrownstone/*.zip
+Assets/External/NvidiaBrownstone/*.partial
+Assets/External/NvidiaCity/
+
+# Reproducible city downloads, conversion intermediates and generated Unreal tiles.
+# Keep source notices/manifests and existing curated/tracked drone assets versioned.
+Assets/External/HelsinkiSurvey/raw/
+Assets/External/HelsinkiSurvey/prepared/
+Assets/External/HelsinkiSurvey/*.zip
+Assets/External/HelsinkiSurvey/prepared_manifest.json
+Assets/External/CarConcept/*.glb
+Assets/External/CarConcept/*.partial
+Assets/External/KenneyCarKit/*.zip
+Content/External/NewYorkBrownstone/
+Content/External/HelsinkiSurvey/
+Content/External/SurveyProbe/
+Content/External/CarConcept/
+Content/External/KenneyCarKit/
+Content/Maps/NewYorkDaytime.umap
+Content/Maps/HelsinkiSenateSquare.umap

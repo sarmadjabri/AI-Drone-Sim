@@ -1,57 +1,22 @@
+# Optional shortcuts; scripts/project.py is the shared Windows/Linux/macOS runner.
 .DEFAULT_GOAL := help
-
-UE_ROOT ?= /home/sarmy/UnrealEngine/UE_5.2
-PROJECT := $(CURDIR)/AerialWorldLab.uproject
 PYTHON ?= .venv/bin/python
-CXX ?= g++
+UE_ROOT ?=
 UE_TEST_FILTER ?= Aether.Flight
-CPP_TEST := /tmp/aether_quadrotor_dynamics_test
+UE_TEST_ARGS ?=
+PROJECT_RUNNER = "$(PYTHON)" scripts/project.py
+ENGINE_OPTION = $(if $(strip $(UE_ROOT)),--ue-root "$(UE_ROOT)",)
 
-.PHONY: help build editor play play-windowed test python-test cpp-test unreal-test
+COMMANDS = doctor build editor play play-windowed play-low headless profile test \
+	python-test cpp-test readability-check prepare-new-york import-new-york bootstrap-city
+.PHONY: help $(COMMANDS) unreal-test
 
 help:
-	@printf '%s\n' \
-		'Project commands:' \
-		'  make build        Build the Unreal Editor target' \
-		'  make editor       Open the project in Unreal Editor' \
-		'  make play         Run the project fullscreen as a standalone game' \
-		'  make play-windowed Run the project in a window' \
-		'  make test         Run Python and standalone C++ tests' \
-		'  make python-test  Run the retained Python simulator tests' \
-		'  make cpp-test     Build and run the portable C++ dynamics tests' \
-		'' \
-		'Override the Unreal install with: make build UE_ROOT=/path/to/UE_5.2'
+	@$(PROJECT_RUNNER) --help
 
-build:
-	"$(UE_ROOT)/Engine/Build/BatchFiles/Linux/Build.sh" \
-		AerialWorldLabEditor Linux Development -Project="$(PROJECT)" -WaitMutex
+$(COMMANDS):
+	$(PROJECT_RUNNER) $@ $(ENGINE_OPTION)
 
-editor:
-	"$(UE_ROOT)/Engine/Binaries/Linux/UnrealEditor" "$(PROJECT)"
-
-play:
-	"$(UE_ROOT)/Engine/Binaries/Linux/UnrealEditor" "$(PROJECT)" \
-		-game -fullscreen
-
-play-windowed:
-	"$(UE_ROOT)/Engine/Binaries/Linux/UnrealEditor" "$(PROJECT)" \
-		-game -windowed -ResX=1280 -ResY=720
-
-test: python-test cpp-test
-
-python-test:
-	"$(PYTHON)" -m pytest -q
-
-cpp-test:
-	"$(CXX)" -std=c++17 -Wall -Wextra -Werror -pedantic \
-		-ISource/AerialWorldLab/Public \
-		Source/AerialWorldLab/Private/Flight/QuadrotorDynamics.cpp \
-		tests/cpp/quadrotor_dynamics_test.cpp -o "$(CPP_TEST)"
-	"$(CPP_TEST)"
-
-# NullRHI validates flight/asset logic, not rendering performance or hardware input.
-unreal-test: build
-	"$(UE_ROOT)/Engine/Binaries/Linux/UnrealEditor" "$(PROJECT)" \
-		-unattended -nop4 -nosound -NullRHI \
-		-ExecCmds="Automation RunTests $(UE_TEST_FILTER); Quit" \
-		-abslog="$(CURDIR)/Saved/Logs/ControllerAutomation.log"
+unreal-test:
+	$(PROJECT_RUNNER) unreal-test $(ENGINE_OPTION) --test-filter "$(UE_TEST_FILTER)" \
+		$(foreach argument,$(UE_TEST_ARGS),--test-arg=$(argument))

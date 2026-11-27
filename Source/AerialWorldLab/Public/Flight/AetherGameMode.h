@@ -1,41 +1,38 @@
+// Runs the imported city level; authored environment geometry is stored in the map.
 #pragma once
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
 #include "AetherGameMode.generated.h"
 
-class AStaticMeshActor;
-class UStaticMesh;
+class UCitySimulationSettings;
 
-UCLASS()
+UCLASS(Config = Game)
+
 class AERIALWORLDLAB_API AAetherGameMode : public AGameModeBase
 {
     GENERATED_BODY()
-
-public:
+  public:
     AAetherGameMode();
+    virtual APawn *SpawnDefaultPawnAtTransform_Implementation(
+        AController *NewPlayer, const FTransform &SpawnTransform) override;
 
-    virtual APawn* SpawnDefaultPawnAtTransform_Implementation(
-        AController* NewPlayer,
-        const FTransform& SpawnTransform) override;
-
-protected:
+  protected:
     virtual void BeginPlay() override;
 
-private:
-    friend class FFlightImportedAssetsTest;
+  private:
     void SetupEnvironmentLighting();
-    AStaticMeshActor* SpawnTestBox(
-        const FVector& Location,
-        const FVector& Scale,
-        const FLinearColor& Color);
-    void SpawnBuilding(
-        const FVector& Location,
-        const FVector& Scale,
-        const FLinearColor& FacadeColor,
-        int32 Floors,
-        int32 WindowColumns);
+    bool SpawnCityTraffic();
+    bool LoadStreetCircuit(TArray<FVector> &Points) const;
+    void EnsureSkyAtmosphere();
+    void ConfigureSunlight(const UCitySimulationSettings &CitySettings);
+    bool ConfigureSkylight(const UCitySimulationSettings &CitySettings);
+    void ConfigureExposure(const UCitySimulationSettings &CitySettings);
 
-    UPROPERTY()
-    TObjectPtr<UStaticMesh> ApartmentFacadePanelMesh;
+    UPROPERTY(EditAnywhere, Config, Category = "City|Traffic")
+    FString TrafficManifestRelativePath = TEXT("CityData/new_york_traffic.json");
+    UPROPERTY(EditAnywhere, Config, Category = "City|Traffic",
+              meta = (ClampMin = "0", ClampMax = "16"))
+    int32 MaximumMovingVehicles = 4;
+    friend class FFlightCityTest;
 };

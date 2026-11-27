@@ -22,11 +22,15 @@ class NavigationSensor:
         self.noise = noise
 
     def observe(self, state, timestamp):
-        x = state.vector()
-        x[:3] += self.rng.normal(0, 0.01 * self.noise, 3)
-        x[3:6] += self.rng.normal(0, 0.02 * self.noise, 3)
-        x[6:10] = integrate(x[6:10], self.rng.normal(0, 0.003 * self.noise, 3), 1.0)
-        x[10:13] += self.rng.normal(0, 0.01 * self.noise, 3)
+        """Perturb a copied state vector; the true physical state must remain unchanged."""
+        # Standard deviations below are m, m/s, radians, rad/s and rotor rad/s.
+        measured_state_vector = state.vector()
+        measured_state_vector[:3] += self.rng.normal(0, 0.01 * self.noise, 3)
+        measured_state_vector[3:6] += self.rng.normal(0, 0.02 * self.noise, 3)
+        measured_state_vector[6:10] = integrate(
+            measured_state_vector[6:10], self.rng.normal(0, 0.003 * self.noise, 3), 1.0
+        )
+        measured_state_vector[10:13] += self.rng.normal(0, 0.01 * self.noise, 3)
         # Rotor tachometers are observed; motor states are not inferred from commands.
-        x[13:17] += self.rng.normal(0, self.noise, 4)
-        return NavigationObservation(timestamp, State.from_vector(x))
+        measured_state_vector[13:17] += self.rng.normal(0, self.noise, 4)
+        return NavigationObservation(timestamp, State.from_vector(measured_state_vector))

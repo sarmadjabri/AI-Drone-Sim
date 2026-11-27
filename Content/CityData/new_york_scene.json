@@ -1,0 +1,5865 @@
+{
+  "schema_version": 2,
+  "city": "New York-style Brownstone Neighborhood",
+  "asset_root": "/Game/External/NewYorkBrownstone",
+  "map_path": "/Game/Maps/NewYorkDaytime",
+  "publisher": "NVIDIA",
+  "bounds_min_source_cm": [
+    -22700.0,
+    -13900.0,
+    -2017.0
+  ],
+  "bounds_max_source_cm": [
+    15300.0,
+    16100.0,
+    1605.4072265625
+  ],
+  "launch_position_cm": [
+    -5900,
+    202,
+    203
+  ],
+  "launch_yaw_degrees": -90,
+  "batches": [
+    {
+      "name": "NYC_Tile_f3f6b68c870a9fa1",
+      "triangles": 29998,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_bb6b2bf20ddad4c0",
+      "triangles": 10647,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_c5d5f56047813651",
+      "triangles": 184,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_b6b0d8ef5807bdf2",
+      "triangles": 95920,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_0b9c01569b3b5860",
+      "triangles": 491590,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_db27fba9b57b3397",
+      "triangles": 179850,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_be05328f0710d1b2",
+      "triangles": 95920,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_e95a995d56c2b1d5",
+      "triangles": 11990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_7ae476fcf977aec9",
+      "triangles": 395670,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_6972f519e1ea4d65",
+      "triangles": 143880,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_e6141fca35b373f3",
+      "triangles": 335720,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_4dd30caeec24cd83",
+      "triangles": 11990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_bcb6988de063632d",
+      "triangles": 611490,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_7ff203fc780d38e5",
+      "triangles": 635470,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_989fc678bfa793d7",
+      "triangles": 119900,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_53b2cd55e0fa2d2c",
+      "triangles": 215820,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_20492b0181ec7d65",
+      "triangles": 323730,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_769bb7f087081292",
+      "triangles": 215820,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_4d081d2cd4b7ca26",
+      "triangles": 323730,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_7a7ff0fb817d3af8",
+      "triangles": 248,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_9447774a81d8c98c",
+      "triangles": 48000,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_99cde442a01a60b1",
+      "triangles": 30000,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_9e210a1a8e6061b3",
+      "triangles": 30000,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_b8cfbcb439024796",
+      "triangles": 30000,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_75359382c2c3a01b",
+      "triangles": 24000,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_26257a0b12045306",
+      "triangles": 30000,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_10967112d7f3c7b1",
+      "triangles": 60000,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_c37eea29d32b75bc",
+      "triangles": 30000,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_bfca51da381ce8df",
+      "triangles": 24000,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_362937250da14e73",
+      "triangles": 30000,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_5a28a8768e5cdf55",
+      "triangles": 30000,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_41732c899bc20031",
+      "triangles": 36000,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_4e251c2c3e064382",
+      "triangles": 30000,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_3c50c442f8abeb94",
+      "triangles": 30000,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_2450ce4e746890cd",
+      "triangles": 72000,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_00d24d2165b0af1d",
+      "triangles": 72000,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_763092a8058d86ce",
+      "triangles": 14,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_86eec951dff1cde9",
+      "triangles": 128,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_792399bb04919a32",
+      "triangles": 192,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_3ddc7f2dabdbb67f",
+      "triangles": 224,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_8fd47e2f7ea72a56",
+      "triangles": 192,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_e19237088afaf9f7",
+      "triangles": 256,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_5fe57c9d8dc0bff4",
+      "triangles": 256,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_2545056b3beea63d",
+      "triangles": 128,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_820e858b10181115",
+      "triangles": 320,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_525e64591507f5b6",
+      "triangles": 704,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_5eeb77d67856b3a3",
+      "triangles": 224,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_72db2b3967849457",
+      "triangles": 416,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_aec027c4fed5ca72",
+      "triangles": 576,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_732db0caf12048e1",
+      "triangles": 5536,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_2522a8d2a3c19ba6",
+      "triangles": 9688,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_005eb603dafd832a",
+      "triangles": 8304,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_97563978e83cc2e2",
+      "triangles": 8304,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_c1727e36b94a0fab",
+      "triangles": 11072,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_b4e2b83a7e31a8ab",
+      "triangles": 11072,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_3ef8e9b7de2a1884",
+      "triangles": 5536,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_2edf4eb541aff776",
+      "triangles": 13840,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_eefc5abb54766bb6",
+      "triangles": 12108,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_b046497d6067efb4",
+      "triangles": 17992,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_cc23de7790f55510",
+      "triangles": 17992,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_7a24a6edab8adb58",
+      "triangles": 13840,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_6f81ea9fd4902ea3",
+      "triangles": 9688,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_ce1381352a49ae66",
+      "triangles": 1358,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_9c7552dc60cf008a",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_8293c697bc17ef33",
+      "triangles": 299975,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_5fef5282d6910dce",
+      "triangles": 179985,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_75e46bf3c723b54a",
+      "triangles": 179985,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_37235afc076fb62a",
+      "triangles": 239980,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_eb6d4b14c6da06b2",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_fca89b81ef372ce2",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_1f2b451bf704245b",
+      "triangles": 179985,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_6e18c6ce8bd351ef",
+      "triangles": 179985,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_8df254b01e5d7517",
+      "triangles": 239980,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_a40d216eb316a4dd",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_4c4ef4b11f9b8030",
+      "triangles": 239980,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_4f4c55835b0ef6c8",
+      "triangles": 59995,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_2bd9a3366f3696a8",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_dab86b9f98cbb79e",
+      "triangles": 59995,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_25a6cc8f18836251",
+      "triangles": 5081,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_668fb34cdbd469af",
+      "triangles": 18102,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_fde09db6a550dfc3",
+      "triangles": 1212,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_bdd9ae9ed6eed95b",
+      "triangles": 3980,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_77a0b277171891ba",
+      "triangles": 45354,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_a6d79635857f6dc0",
+      "triangles": 243642,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_d21e1c4aa6bd5fd4",
+      "triangles": 85084,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_63624315cbebabb2",
+      "triangles": 45354,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_7b4119985a761808",
+      "triangles": 5624,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_5e8dd090ae661fa1",
+      "triangles": 175792,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_b6e1634bf6a21111",
+      "triangles": 67850,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_99d09cf00b7fdf79",
+      "triangles": 158558,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_1838251e4d9f24fc",
+      "triangles": 294258,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_17880b0975795b6d",
+      "triangles": 305868,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_90b17c3798b53807",
+      "triangles": 50978,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_ec8087fd506ff562",
+      "triangles": 101956,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_3ca2bf32ac0f9ad5",
+      "triangles": 152934,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_1229322bc7f28069",
+      "triangles": 101956,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": 1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_2304e83569362e92",
+      "triangles": 152934,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": 1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_7f3065e868d4a391",
+      "triangles": 492,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_0e64e5c678c3ec4e",
+      "triangles": 1320,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_445ec5cbef45e8d7",
+      "triangles": 590,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_01ecb9779400b9c6",
+      "triangles": 332,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_23b7e8b48fcca55c",
+      "triangles": 12,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_e097f587caaddc08",
+      "triangles": 2452,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_d227536e000be27b",
+      "triangles": 23486,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_885c3d17da59af54",
+      "triangles": 1330,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_d9f7b17a1542f886",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_3b2b00172fa5a52d",
+      "triangles": 239980,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_c71c36e80df63d60",
+      "triangles": 239980,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_ae2b88e9a96db086",
+      "triangles": 179985,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_1df98500b794d161",
+      "triangles": 239980,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_38e76bd98cb739bf",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_c347835d17e54940",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_aad55503bac09538",
+      "triangles": 179985,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_cef533910596ca80",
+      "triangles": 179985,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_31af380d81f1aa1f",
+      "triangles": 239980,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_fb51352f185427aa",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_fd4a949dc1d42d84",
+      "triangles": 239980,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_54e1271cd9c0151d",
+      "triangles": 59995,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_d42ff95615ae409a",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_7db52ada72d948ea",
+      "triangles": 59995,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_fdf3079ca95f15dd",
+      "triangles": 340,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_aae4876d9424ea51",
+      "triangles": 67182,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_46026d2f6af0dbc5",
+      "triangles": 9208,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_9b6edb9b5e646785",
+      "triangles": 72,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_4470041e644e1cdf",
+      "triangles": 108,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_105f433c07f926f6",
+      "triangles": 126,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_f65822fbcd79686e",
+      "triangles": 108,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_a859ddf30c662c21",
+      "triangles": 80,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_28e6e8ff1b52dd21",
+      "triangles": 11032,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_f169d10144363dcc",
+      "triangles": 9600,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_db87c43efba18e11",
+      "triangles": 144,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_1878d8275959ba81",
+      "triangles": 74,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_cb225d0e4dbcd734",
+      "triangles": 30000,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_a7bdfe4556427fb0",
+      "triangles": 9068,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_8103e6bc8ae444a4",
+      "triangles": 166,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_c77268d5855cac37",
+      "triangles": 212,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_81f88795ff1b5d86",
+      "triangles": 258,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_03d5811e32d09164",
+      "triangles": 80,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_d8ea8bffa88e147c",
+      "triangles": 10,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_408d71e23cb9b6ba",
+      "triangles": 5672,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_5408a2e34e05f1f9",
+      "triangles": 14180,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_3f86e504c6dd98b5",
+      "triangles": 17016,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_d0db0af576ac770c",
+      "triangles": 5672,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_8cca90e24912e552",
+      "triangles": 11344,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_e45b938318dda478",
+      "triangles": 11344,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_7d4fb74f34bc053c",
+      "triangles": 5672,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_5fa21beb416c0f04",
+      "triangles": 14180,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_f3ba85537cba7b2f",
+      "triangles": 14180,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_73cc6ac68eae8675",
+      "triangles": 8508,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_44c2a08243ad153f",
+      "triangles": 5672,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_e61417dc1e6fd631",
+      "triangles": 17016,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_61ff7eb8cb93e12b",
+      "triangles": 17016,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_696ac4801dad6a4d",
+      "triangles": 11344,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_1700c82975fdb645",
+      "triangles": 5672,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_51905e4659daa48f",
+      "triangles": 5672,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_f8eff5ad33dd2e0d",
+      "triangles": 52958,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_073ca628fae73aef",
+      "triangles": 5012,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_1f2c9148393532e3",
+      "triangles": 12,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_1c0336e7d0d303d3",
+      "triangles": 52,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_3f606898965ef258",
+      "triangles": 38,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_ce31215a4f1de31c",
+      "triangles": 100,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_e2ffca21b99b7a41",
+      "triangles": 226,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_0b25080d3a5df398",
+      "triangles": 1612,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_74e04be2c264ca2b",
+      "triangles": 24,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_d8608c8c3eede97d",
+      "triangles": 2540,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_701eb373a20972ac",
+      "triangles": 552,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_2341a61480c751d7",
+      "triangles": 8140,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_e9f01538a75f5066",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_353218ccda560872",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_c0e041bf66fd281e",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_73ad75a9fae8d016",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_b4ff481d32ed30e7",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_cb4e2930a7127858",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_6988b1e5e5392190",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_86148000045df24a",
+      "triangles": 2764,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_d45017857d66efb9",
+      "triangles": 4146,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_e18f8e4b12af5e4f",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_be3f1dac099fd343",
+      "triangles": 26,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_a6e5fb24c6d50592",
+      "triangles": 7757,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_8ed2b21c3d9235e1",
+      "triangles": 31740,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_075e5a7a9fec8b41",
+      "triangles": 7427,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_76f1ea3eaea38fb7",
+      "triangles": 24008,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_1454331620e15a23",
+      "triangles": 56,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_5a4490283638ce59",
+      "triangles": 1480,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_4e40d346f317076f",
+      "triangles": 1466,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_0e3b841c46e11708",
+      "triangles": 84,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_4786e9866dce7350",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_05ff649b54363110",
+      "triangles": 112,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_4a621b1b36403ed3",
+      "triangles": 1494,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_4bbcad0d33d915af",
+      "triangles": 56,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_15a0990d12b94513",
+      "triangles": 4410,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_ad9f05d6fc3d88aa",
+      "triangles": 2806,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_1e1ffa53aa5ea0ab",
+      "triangles": 1480,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_f93819a0a3a7aa3e",
+      "triangles": 1564,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_6a631370cddd0e8c",
+      "triangles": 1620,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_196f705abdbedbe9",
+      "triangles": 4146,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_6943af3b138e00ba",
+      "triangles": 50860,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_03267f42af112a00",
+      "triangles": 39989,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_56eddaee3f78f4d2",
+      "triangles": 60000,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_67173ee016618433",
+      "triangles": 240000,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_4e83068b9e49b6db",
+      "triangles": 420000,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_ef117f84be5adcc1",
+      "triangles": 180000,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_391fbac6022f950a",
+      "triangles": 240000,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_d9d0d24c40d9ab7b",
+      "triangles": 120000,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_0f55d0c12d858f1b",
+      "triangles": 300000,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_a094b399c3eb8be0",
+      "triangles": 60000,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_5958fe244c852887",
+      "triangles": 180000,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_9f7c002e575ad0c3",
+      "triangles": 180000,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_b06f90231e1f7dd9",
+      "triangles": 60000,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_b80b151e1efb8f22",
+      "triangles": 120000,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_c138a2fbf5bbddfc",
+      "triangles": 240000,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_d4ce1512112eeaa3",
+      "triangles": 120000,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_e060fd227fea521d",
+      "triangles": 120000,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_2ed6d3eac46d6143",
+      "triangles": 2646,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_0b7fa40ad76bdb95",
+      "triangles": 2120,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_499a4c80bc5b74dd",
+      "triangles": 3370,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_fb6f4f1b30b7930a",
+      "triangles": 3278,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_5a7f0fe929daaeba",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_4037da7a007a4592",
+      "triangles": 2528,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_7ac06ba5542bacd9",
+      "triangles": 3910,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_64dd33fd818495a7",
+      "triangles": 2646,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_debacf112df0dbe0",
+      "triangles": 3224,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_9c7f0b206a4799ef",
+      "triangles": 5750,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_0060a27181286d69",
+      "triangles": 4976,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_1f900d6b97f79d11",
+      "triangles": 6744,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_3764f7751cf86451",
+      "triangles": 8228,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_d43878c7d41f12e0",
+      "triangles": 4318,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_5328c386ddad56e4",
+      "triangles": 340,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_203e775bbd04160a",
+      "triangles": 660,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_34b558d4b9b761e1",
+      "triangles": 308,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_0d128c03317245a9",
+      "triangles": 114,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_3daf11c7f0ce7320",
+      "triangles": 8608,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_46ba51277c89f7e6",
+      "triangles": 4304,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_78e049509bb5e87a",
+      "triangles": 2836,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_23721e3acd6d41c7",
+      "triangles": 228,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_dca54502d03a4f92",
+      "triangles": 12,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_d755f71b388a2ddb",
+      "triangles": 48,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_88489a9f866a1fa3",
+      "triangles": 72,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_f4f8af6bd9f01fb0",
+      "triangles": 84,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_99feeff411f02ee8",
+      "triangles": 72,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_ece4dadc54e8796f",
+      "triangles": 1319,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_864059f560711e3b",
+      "triangles": 3379,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_f76a8b3f9df2ff4d",
+      "triangles": 96,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_bfd3a398a8ed9524",
+      "triangles": 60,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_535a7307e747fba7",
+      "triangles": 132,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_09a01a835a5d2e9c",
+      "triangles": 288,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_37ced7ea0635cde0",
+      "triangles": 84,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_45c5caae67ea700d",
+      "triangles": 132,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_00d857d82441b441",
+      "triangles": 216,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_efcabbaa293b470e",
+      "triangles": 15361,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_b9c3d840105853e8",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_571aeaf8afcbd510",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_11aabfe569b20621",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_d1c87cdf2d2501df",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_d1ff8aff7c8dc9cf",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_faabe6ec8d9a4fdc",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_1f02f11b369d15a8",
+      "triangles": 4146,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_d647cfd18df09be1",
+      "triangles": 2764,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_cccbb9a321a405b1",
+      "triangles": 2764,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_4125afa743a43245",
+      "triangles": 4146,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_55408fa3f5df7a79",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_87b50b6648654a04",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_c8170aa3486e3c6c",
+      "triangles": 19392,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_cfd534153bd3647f",
+      "triangles": 29088,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_f4386dcfc46ae6e5",
+      "triangles": 33936,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_805ee119ae721552",
+      "triangles": 29088,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_6eb9804b62f96e24",
+      "triangles": 38784,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_84b1f8744d4c734c",
+      "triangles": 38784,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_587554472501fb46",
+      "triangles": 19392,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_7f0afd0632cd6480",
+      "triangles": 38784,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_7bb7eda18b598eb4",
+      "triangles": 53328,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_2286d56920297dc3",
+      "triangles": 53328,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_4359f12914f80ca9",
+      "triangles": 38784,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_7bf54da855b7493f",
+      "triangles": 67872,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_f3fa0f4be9a26fd6",
+      "triangles": 38784,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 0,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_d0799a132abd86ae",
+      "triangles": 504,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_f73f0bc47aaa8322",
+      "triangles": 882,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_8e33de330f09defe",
+      "triangles": 756,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_8130692e337a8655",
+      "triangles": 756,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_2d948c52633e5ef3",
+      "triangles": 1008,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_041e92c72d227122",
+      "triangles": 215856,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_2fd401bb9b771cc0",
+      "triangles": 1008,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_ea751c1d9ec8c273",
+      "triangles": 504,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_989acd6df097d10f",
+      "triangles": 4698,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_240edb1aa178e078",
+      "triangles": 1638,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_7b4b06e7a747f2ea",
+      "triangles": 882,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_332dd0f98240be03",
+      "triangles": 1638,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_cb9329a2565190ba",
+      "triangles": 2142,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_5ff3fffc83356d02",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_da654b3e757c897d",
+      "triangles": 299975,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_4ac700d2294b581f",
+      "triangles": 179985,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_fda12b66f037fede",
+      "triangles": 179985,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_54aa03a638b2edbd",
+      "triangles": 239980,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_69b95f6d8fdba8e3",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_cd916c6def99ed07",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_6c5a58c59febd67c",
+      "triangles": 179985,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_4a78839df965a254",
+      "triangles": 179985,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_16ccf8a88f9b6511",
+      "triangles": 239980,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_a480242cad240b6f",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_422b83632c94d97d",
+      "triangles": 239980,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_da3450c92ccf6d19",
+      "triangles": 59995,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_e70e07ae7862df95",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_421f7a2f27984a34",
+      "triangles": 59995,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_081fcef66741cd8a",
+      "triangles": 50416,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_a99a84be4f6efc1d",
+      "triangles": 34730,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_96574427c2fbba41",
+      "triangles": 38495,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_d6106129c8a60b15",
+      "triangles": 75878,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_79acc23d64d571c8",
+      "triangles": 77208,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_b402825b24de6010",
+      "triangles": 30000,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_9965140c86b4eedf",
+      "triangles": 37676,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_093325ceb21f1de6",
+      "triangles": 44648,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_5c4bc86c4d6cf677",
+      "triangles": 51512,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_81b35e293b306e3d",
+      "triangles": 132476,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_51609e8e744bdb89",
+      "triangles": 70946,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_8550e66d977a8b54",
+      "triangles": 59611,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_788a2a7a60013bef",
+      "triangles": 1602,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_35f6886337ff1bc2",
+      "triangles": 65836,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_94bf1b6a8f9f8023",
+      "triangles": 60346,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_86546cfedeec24cc",
+      "triangles": 79246,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_421e13d4eae316e9",
+      "triangles": 1602,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_6512eacd0b0aed81",
+      "triangles": 2642,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_b0045973d40f80ae",
+      "triangles": 1560,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_483a9bd9cf76be62",
+      "triangles": 526,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_1a32304dcb413321",
+      "triangles": 128,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_85bbc598d6218588",
+      "triangles": 240,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_aa1a5169004ba671",
+      "triangles": 180,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_f9894fba36c91f2c",
+      "triangles": 4664,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_28f19f728e6dbd86",
+      "triangles": 596,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_b18f63461ec09464",
+      "triangles": 21,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_f2919d71bbb7d4ac",
+      "triangles": 411,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_c2c3d5af77bacfd8",
+      "triangles": 1252,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_a8491aa17f6ad094",
+      "triangles": 29,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_cdf9a5e3e8e54665",
+      "triangles": 37,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_68a31a8a4c2a3aef",
+      "triangles": 40,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_97a4616accca5eff",
+      "triangles": 130,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_b80578d21c7dba76",
+      "triangles": 140,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_8d06fbae41cd5fec",
+      "triangles": 70,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_b3fd968c05130717",
+      "triangles": 20,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_9c3ec4dd6b5b95fa",
+      "triangles": 120,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_9363e01b38203a4d",
+      "triangles": 50,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_bf83c628e697f365",
+      "triangles": 110,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_accc59de176ebadd",
+      "triangles": 20,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_e9a5ff7ddbd1437d",
+      "triangles": 110,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_c5e2a86bd1c7c2c3",
+      "triangles": 120,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_d67bdb482b413806",
+      "triangles": 30,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_3b910ffd0241bb85",
+      "triangles": 80,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_c58b23d7d75993f6",
+      "triangles": 80,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_343e5f006806460b",
+      "triangles": 60,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_1ba4ae33aed51dcf",
+      "triangles": 60,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_17d7060ef2d896e1",
+      "triangles": 822,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_8b75b0475eda4d99",
+      "triangles": 1184,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_c85b1f97e4196280",
+      "triangles": 592,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_a430a15ddf9c8dd5",
+      "triangles": 146,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_c195175900dfca0d",
+      "triangles": 2440,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_20398d902656fc48",
+      "triangles": 2440,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_66d5164c76ebd756",
+      "triangles": 4880,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_a5a70f3cafe1f02f",
+      "triangles": 1220,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_3b85066280131f48",
+      "triangles": 2440,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_ac08e1979758ebae",
+      "triangles": 1220,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_c575921c07cc1ece",
+      "triangles": 3660,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_2087423478cc88d0",
+      "triangles": 1220,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_83b78e33021286dc",
+      "triangles": 4935,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_1a63254635cb67a3",
+      "triangles": 4880,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_d886f31e94b7885f",
+      "triangles": 2440,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_4a45e59e7947498b",
+      "triangles": 1220,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_dec7c50b5dba75c6",
+      "triangles": 2440,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_f033f777616982e9",
+      "triangles": 2440,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_c8bf5f70609866fe",
+      "triangles": 2440,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_9f8a081e91cbd4be",
+      "triangles": 1220,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_5b7f36681bb4a089",
+      "triangles": 3660,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_50571d6546bfe684",
+      "triangles": 3660,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_8506341467a8e5b0",
+      "triangles": 2440,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_d49080f2dcb9e0d8",
+      "triangles": 23248,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_60a590565d348b5e",
+      "triangles": 36732,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_a91bd9b01e4c3945",
+      "triangles": 38824,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_6b8c00bbb1d4028d",
+      "triangles": 34872,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_be446a8ffe1ca9d7",
+      "triangles": 20416,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_50246db2a0eddddc",
+      "triangles": 26080,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_594f2e06e44fe19c",
+      "triangles": 46496,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_add89ba434b5060e",
+      "triangles": 24848,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_afcd088acdc739d6",
+      "triangles": 59472,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_d9cdde4f826a15aa",
+      "triangles": 63548,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_38647ea9708515eb",
+      "triangles": 51692,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_3fab4351bd376b22",
+      "triangles": 69452,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_ba8c76ade0a99ce0",
+      "triangles": 44462,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_6a8f936f72bcc69d",
+      "triangles": 19616,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_abbe882ecf31c7d0",
+      "triangles": 24640,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_2043b89b93dea0d0",
+      "triangles": 38968,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_afb68d80c6087126",
+      "triangles": 42156,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_9cbfb4d53ad2f273",
+      "triangles": 38584,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_ab7f5461a2c8c825",
+      "triangles": 46448,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_0951c4067630a33f",
+      "triangles": 3760,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_3671eef42ad1c510",
+      "triangles": 50208,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_2f0de2d3b858dbff",
+      "triangles": 27900,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_8ee89c60405b06c5",
+      "triangles": 29999,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_96d23001a8051dee",
+      "triangles": 30000,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_6393e700f25dca90",
+      "triangles": 67828,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_22f73aeaedd33cfe",
+      "triangles": 59572,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_2484ce54b129f1e4",
+      "triangles": 29999,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_eed6de1660750ecd",
+      "triangles": 46070,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_8efbcb02355f60c2",
+      "triangles": 5550,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_93d6daaaeed6b14a",
+      "triangles": 3700,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_dbf2c18add00f404",
+      "triangles": 1850,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_4dbf9b07934de6a5",
+      "triangles": 3700,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_d3b1d7c6d1739415",
+      "triangles": 1850,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_7829b8ef633a7195",
+      "triangles": 1850,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_c14fa8a6edeabec0",
+      "triangles": 5550,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_9245f4f084f4bedd",
+      "triangles": 7400,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_0277669666766a5d",
+      "triangles": 5550,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_0ff7f835e4e9e819",
+      "triangles": 1850,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_ada6ca57b697d14f",
+      "triangles": 3700,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_978e228a25ece630",
+      "triangles": 3700,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_f4c2cedce36c4fee",
+      "triangles": 1850,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_73c34f6e75fd5659",
+      "triangles": 1850,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_e302424273711cdf",
+      "triangles": 1850,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_5535cbaf99f2a12f",
+      "triangles": 1850,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_e79da177b012d8b8",
+      "triangles": 1850,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_ef38a0a6f6b2c3c1",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_1636e00c6c21d994",
+      "triangles": 2764,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_5707d2fd77ef1017",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_58fa13eed69fcb78",
+      "triangles": 2764,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_46d91aaf1fb406cd",
+      "triangles": 2764,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_1c705e5cede71442",
+      "triangles": 2764,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_43d834305e59fad0",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_d8b6ee21b33b1f04",
+      "triangles": 2764,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_b1a691405406fd5c",
+      "triangles": 1382,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_032a6e6d3393b817",
+      "triangles": 4146,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_ba174fc479358d5a",
+      "triangles": 4146,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_7321e6f09352c9fd",
+      "triangles": 2764,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_d77bb404feb70443",
+      "triangles": 2764,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_d6f51497cc465fac",
+      "triangles": 168,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_4b1d8337406faa29",
+      "triangles": 546,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_80e1cb19e2396b95",
+      "triangles": 588,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_c711116bc191ff90",
+      "triangles": 294,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_d30c7fc438486f90",
+      "triangles": 84,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_cdd78db8a6ba6d95",
+      "triangles": 504,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_910c9ac8f75fa275",
+      "triangles": 210,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_f67e102697ef0403",
+      "triangles": 462,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_715411bfc2d462a3",
+      "triangles": 84,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_5c1d4062819096ae",
+      "triangles": 612,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_2905a28eb7fb7899",
+      "triangles": 504,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_03d3ebc399d4be45",
+      "triangles": 126,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_a05ed894d2f6a3b4",
+      "triangles": 336,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_36472f41313b25e7",
+      "triangles": 336,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_e9105a799f931028",
+      "triangles": 252,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_0bd697d4923498d3",
+      "triangles": 252,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_47a2d31130283275",
+      "triangles": 2,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_815d785f9da86f39",
+      "triangles": 202,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_63ff4aa5cfc540d4",
+      "triangles": 202,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_ad97cf6acfb856f9",
+      "triangles": 202,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_f366cb260092906b",
+      "triangles": 810,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_b91da8ac0433eba0",
+      "triangles": 1712,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_830545d628762c16",
+      "triangles": 810,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_fbe05f01f209e862",
+      "triangles": 1720,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_5d88550af1c58dd6",
+      "triangles": 1450,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_d123dd9fa82c4cd9",
+      "triangles": 1450,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_0a4e12ebcafedc3e",
+      "triangles": 202,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_47a58641acfc63ee",
+      "triangles": 202,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_5498b29a55d442b7",
+      "triangles": 202,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_384a09bb294d74af",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_e2984badd38ba2b1",
+      "triangles": 299975,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_82acdcbf9f9c6d83",
+      "triangles": 179985,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_e30ea3dcef1fa5b5",
+      "triangles": 179985,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_212a718068a652e7",
+      "triangles": 239980,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_782d9b74506c06df",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_0a6a80af990773f2",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_1fd63b1091f3bd9c",
+      "triangles": 179985,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_74ca4c9df2e46798",
+      "triangles": 179985,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_23cdd78ca8fa2a95",
+      "triangles": 239980,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_2c97142da5d24c6b",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_76bee6dc6f0c1406",
+      "triangles": 239980,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_dade177da854592c",
+      "triangles": 59995,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_bcc3a928f807be65",
+      "triangles": 119990,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_c081e654c817b653",
+      "triangles": 59995,
+      "cast_shadow": false,
+      "foliage": true,
+      "collision": false,
+      "category": "leaf",
+      "cell_x": 1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_9a31f96dd8a9bf02",
+      "triangles": 7312,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_7123c38923521775",
+      "triangles": 12238,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_cccefe58b6c78865",
+      "triangles": 11743,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_c1d3ac477d484d22",
+      "triangles": 11234,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_8a66b3402c18e132",
+      "triangles": 13992,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_588f59f9201babcd",
+      "triangles": 800,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_e91f6070bcb9841c",
+      "triangles": 14792,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_77b3260d3922394e",
+      "triangles": 7740,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_bce5e12c7b925768",
+      "triangles": 15902,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_4e87c9a8abcd9e96",
+      "triangles": 20693,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_8d03adc0e6a2949d",
+      "triangles": 21059,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_befaacc7d238be70",
+      "triangles": 17253,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_dc6faf78d29a3f04",
+      "triangles": 25006,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_9bb9dabc685bb0c6",
+      "triangles": 13020,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_f3d0caff7fb5e29c",
+      "triangles": 6,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_bd7e9080abeab3ff",
+      "triangles": 53735,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_8b2b85e3813c8855",
+      "triangles": 5048,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_08a5231a6bf74876",
+      "triangles": 3348,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_f7e61d01dd451592",
+      "triangles": 8332,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_680331f5533ee908",
+      "triangles": 8428,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_3cb2f37c28b1a6f8",
+      "triangles": 6674,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_98abdf9c585c2aa1",
+      "triangles": 6988,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_f292260ddd4fe756",
+      "triangles": 56506,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_5f36df9d9b4847e8",
+      "triangles": 60809,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_4e7b2c3a72f218e5",
+      "triangles": 9676,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_650ac539aa93c8fc",
+      "triangles": 5138,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_07ecbf89f115b0e4",
+      "triangles": 78635,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_74bb4ad943668e78",
+      "triangles": 44963,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_471fbc0efd6d4735",
+      "triangles": 9866,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_8a8c617b8d31e5de",
+      "triangles": 11654,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_25d281a5679b1271",
+      "triangles": 15426,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_1309bb4584bf3f85",
+      "triangles": 6784,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_03f6ede377cd831f",
+      "triangles": 35410,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_d74a259a68319745",
+      "triangles": 14876,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_283d48c4711e3f97",
+      "triangles": 88,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_67ab9f4324626791",
+      "triangles": 197,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_d4583c55b65ca6e0",
+      "triangles": 5771,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_38b076656ed3261c",
+      "triangles": 185,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_bcefc93da75108dc",
+      "triangles": 54974,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_280f9c8ecd1d46ef",
+      "triangles": 88660,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_f939606c40f60128",
+      "triangles": 94358,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_681ba661f9801141",
+      "triangles": 84959,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_131c3718cd55163c",
+      "triangles": 105111,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_ee2fe290aa94ca1c",
+      "triangles": 18400,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_507d4cd3692c6fe7",
+      "triangles": 113294,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_3aedc4687d2bab3c",
+      "triangles": 61420,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_10005a66fac7b8a6",
+      "triangles": 131053,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_68699099578ad77c",
+      "triangles": 149948,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_acff934530f5d4d5",
+      "triangles": 155801,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_1769c785f02b1629",
+      "triangles": 142364,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_187ea2c99db70ffa",
+      "triangles": 179446,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_b08043b7d97cd7f7",
+      "triangles": 100939,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_eb444fc465a1db26",
+      "triangles": 13572,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_bfea1888ef77bc39",
+      "triangles": 33930,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_8ab8008268da0233",
+      "triangles": 20358,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_0505626c8ec3f8fb",
+      "triangles": 20358,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_3ab5e93e433bf410",
+      "triangles": 27144,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_2cda82e5add6310c",
+      "triangles": 13572,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_a493b98daf041647",
+      "triangles": 13572,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_6970fd9dfe654086",
+      "triangles": 20358,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_f1d3fc56ef473147",
+      "triangles": 20358,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_e96f4f8406b813ee",
+      "triangles": 27144,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_a9f489f8905864a8",
+      "triangles": 13572,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_ca7b77999aa22e66",
+      "triangles": 27144,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_08aff981b7ff7d59",
+      "triangles": 6786,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_e963e3b7d5d7ea42",
+      "triangles": 13572,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": 1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_4b8a3d4081eca280",
+      "triangles": 6786,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": 1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_7e9f88e57346b682",
+      "triangles": 2128,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_66d979cb694af7a8",
+      "triangles": 3192,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_12a64f902b768860",
+      "triangles": 3724,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_8a112b2654ec87f7",
+      "triangles": 3192,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_cb532bd1e5bcb014",
+      "triangles": 4160,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_e03cf466cecd1ed8",
+      "triangles": 96,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_2e1e2ab2974ce37a",
+      "triangles": 4256,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_6af1eccd8fcb5866",
+      "triangles": 2128,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_4cc3e3ed4c62b109",
+      "triangles": 5852,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_db2da6cd0a089601",
+      "triangles": 5368,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_d8d98e62442feb16",
+      "triangles": 5804,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_dd2b834b294c48bc",
+      "triangles": 5852,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_314221729546c7a7",
+      "triangles": 5416,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_667dee6f35ec6899",
+      "triangles": 4160,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_ebe0d19f6c09181c",
+      "triangles": 104,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_14ea6ffdae140c0b",
+      "triangles": 6000,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_819e7b3d7bee57a9",
+      "triangles": 24000,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_8e0533c374716f0a",
+      "triangles": 42000,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_1fb96cc56f9491d0",
+      "triangles": 18000,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_539ff0161385c497",
+      "triangles": 24000,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_d610b0c41e31da1e",
+      "triangles": 12000,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -2,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_057dd1e2d9219fe7",
+      "triangles": 30000,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_eaab6abe1f03334d",
+      "triangles": 6000,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_00752ebf2f3bdb3c",
+      "triangles": 18000,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_72dc32859e89e789",
+      "triangles": 18000,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_47b1bc259f4319e0",
+      "triangles": 6000,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_a9cd6af8ca3c05d2",
+      "triangles": 12000,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_8f32e4d480cc9584",
+      "triangles": 24000,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": 0,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_99e595f61b4f237d",
+      "triangles": 12000,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": 1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_fac3b9a1fbeaa301",
+      "triangles": 12000,
+      "cast_shadow": true,
+      "foliage": true,
+      "collision": true,
+      "category": "wood",
+      "cell_x": 1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_c98eeb6134d7c9af",
+      "triangles": 2836,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_c35fe079948f6e7c",
+      "triangles": 208,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_507c6dadf9a0c018",
+      "triangles": 312,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_3a1c39384935d91d",
+      "triangles": 364,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_4ff5f62235c34d95",
+      "triangles": 312,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -3,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_f6bfbf21e5d87320",
+      "triangles": 416,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_b0ab097ed6ad7a97",
+      "triangles": 416,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -2,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_fcf8c7166777e35d",
+      "triangles": 208,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -2
+    },
+    {
+      "name": "NYC_Tile_5c59c726b46c7f0c",
+      "triangles": 520,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_c98102bfdb5a650f",
+      "triangles": 624,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 0
+    },
+    {
+      "name": "NYC_Tile_2e73839e855591f1",
+      "triangles": 364,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": -1,
+      "cell_y": 1
+    },
+    {
+      "name": "NYC_Tile_46b3d430cb6555ec",
+      "triangles": 624,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": -1
+    },
+    {
+      "name": "NYC_Tile_8987564c460f85cd",
+      "triangles": 988,
+      "cast_shadow": true,
+      "foliage": false,
+      "collision": true,
+      "category": "architecture",
+      "cell_x": 0,
+      "cell_y": 0
+    }
+  ]
+}

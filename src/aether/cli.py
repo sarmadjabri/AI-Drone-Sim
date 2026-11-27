@@ -24,7 +24,10 @@ def _parser():
 
 def main(argv=None):
     args = _parser().parse_args(argv)
-    scenario = Scenario.load(args.scenario) if args.scenario else Scenario()
+    if args.scenario:
+        scenario = Scenario.load(args.scenario)
+    else:
+        scenario = Scenario()
     if args.seed is not None:
         scenario.seed = args.seed
     simulation = Simulation(scenario)

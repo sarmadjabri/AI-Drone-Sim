@@ -1,0 +1,31 @@
+{
+  "capture": "Saved/Profiling/CSV/Profile(20261127_125627).csv",
+  "sample_count": 240,
+  "warmup_frames": 120,
+  "FrameTime": {
+    "median_ms": 26.39285,
+    "p95_ms": 33.387924999999996
+  },
+  "GameThreadTime": {
+    "median_ms": 2.8985,
+    "p95_ms": 3.6492
+  },
+  "RenderThreadTime": {
+    "median_ms": 2.7285000000000004,
+    "p95_ms": 3.5751499999999994
+  },
+  "GPU/Total": {
+    "median_ms": 25.5865,
+    "p95_ms": 31.465649999999997
+  },
+  "GPU/ShadowDepths": {
+    "median_ms": 2.019,
+    "p95_ms": 2.74005
+  },
+  "scene_revision": "complete street-tree crowns",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "quality": "balanced"
+}

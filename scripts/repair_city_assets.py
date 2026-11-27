@@ -40,7 +40,7 @@ for suffix in 'abcd':
         raise RuntimeError('Missing building ' + suffix)
     for slot in range(len(mesh.get_editor_property('static_materials'))):
         mesh.set_material(slot, material)
-    # Static concave architecture needs collision matching its visible surfaces.
+    # Static concave architecture needs collision matching its visible surfaces
     mesh.get_editor_property('body_setup').set_editor_property(
         'collision_trace_flag', unreal.CollisionTraceFlag.CTF_USE_COMPLEX_AS_SIMPLE)
     unreal.EditorAssetLibrary.save_loaded_asset(mesh)

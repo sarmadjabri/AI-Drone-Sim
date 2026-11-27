@@ -1,0 +1,10 @@
+Author: Kenney
+Asset: Car Kit 3.1
+License: CC0 1.0 Universal; see License.txt
+Author listing: https://kenney.nl/assets/car-kit
+Author upload: https://opengameart.org/content/car-kit
+Download: https://opengameart.org/sites/default/files/kenney_car-kit_3.1.zip
+Retrieved: 2026-11-26
+Selected FBX meshes and original palette retained for repeatable Unreal import.
+The car includes its wheels in the combined imported mesh. These are low-poly
+assets, not photographic scans or replicas of real vehicle makes.

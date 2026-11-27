@@ -15,6 +15,7 @@ class DroneConfig:
     gravity: float = 9.81
     thrust_coefficient: float = 1.8e-5
     torque_ratio: float = 0.018
+    # Historical field name: this value is radians/second, not revolutions/minute.
     max_rpm_rad: float = 900.0
     motor_tau: float = 0.035
     linear_drag: float = 0.18
@@ -23,6 +24,7 @@ class DroneConfig:
     battery_wh: float = 30.0
 
     def __post_init__(self):
+        """Reject nonphysical values before they enter numerical integration."""
         for name in (
             "mass",
             "arm",
@@ -46,11 +48,13 @@ class DroneConfig:
 
     @property
     def max_thrust(self):
+        """Return maximum single-rotor thrust in newtons from the speed-squared law."""
         return self.thrust_coefficient * self.max_rpm_rad**2
 
     @property
     def mixer(self):
         # Plus layout: +X, +Y, -X, -Y. Alternating reaction torques.
+        """Map four plus-layout rotor thrusts to collective force and body torques."""
         a, k = self.arm, self.torque_ratio
         return np.array([[1, 1, 1, 1], [0, a, 0, -a], [-a, 0, a, 0], [k, -k, k, -k]])
 
@@ -71,6 +75,7 @@ class Scenario:
     seed: int = 7
 
     def __post_init__(self):
+        """Reject nonphysical values before they enter numerical integration."""
         if (
             not np.isfinite(self.dt)
             or not np.isfinite(self.control_dt)
@@ -97,9 +102,11 @@ class Scenario:
 
     @classmethod
     def load(cls, path: str | Path):
+        """Load and validate an explicit scenario JSON file."""
         return cls(**json.loads(Path(path).read_text()))
 
     def save(self, path: str | Path):
+        """Write scenario parameters so another run can reproduce the setup."""
         from dataclasses import asdict
 
         Path(path).write_text(json.dumps(asdict(self), indent=2) + "\n")

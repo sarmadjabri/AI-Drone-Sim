@@ -1,3 +1,4 @@
+// Keeps body-locked FPV separate from stabilized/gimbal and chase-camera behavior.
 #include "Flight/DroneCameraControllerComponent.h"
 
 #include "Camera/CameraComponent.h"
@@ -8,7 +9,7 @@ namespace
 {
     constexpr float CameraIntegrationStepSeconds = 1.0F / 120.0F;
     constexpr float MinimumHeadingProjectionSquared = 1.0e-6F;
-}
+} // namespace
 
 UDroneCameraControllerComponent::UDroneCameraControllerComponent()
 {
@@ -16,16 +17,14 @@ UDroneCameraControllerComponent::UDroneCameraControllerComponent()
     PrimaryComponentTick.TickGroup = TG_PostPhysics;
 }
 
-void UDroneCameraControllerComponent::Configure(
-    USceneComponent* InDroneBody,
-    UCameraComponent* InFirstPersonCamera)
+void UDroneCameraControllerComponent::Configure(USceneComponent *InDroneBody,
+                                                UCameraComponent *InFirstPersonCamera)
 {
     DroneBody = InDroneBody;
     FirstPersonCamera = InFirstPersonCamera;
     if (FirstPersonCamera)
     {
-        FirstPersonCamera->PrimaryComponentTick.AddPrerequisite(
-            this, PrimaryComponentTick);
+        FirstPersonCamera->PrimaryComponentTick.AddPrerequisite(this, PrimaryComponentTick);
     }
     ResetCameraPose();
 }
@@ -44,9 +43,11 @@ void UDroneCameraControllerComponent::SetViewMode(EDroneViewMode NewMode)
 
     if (FirstPersonCamera && ViewMode != EDroneViewMode::ThirdPerson)
     {
-        const float FieldOfView = ViewMode == EDroneViewMode::StabilizedFirstPerson
-            ? StabilizedFieldOfView
-            : BodyLockedFieldOfView;
+        float FieldOfView = BodyLockedFieldOfView;
+        if (ViewMode == EDroneViewMode::StabilizedFirstPerson)
+        {
+            FieldOfView = StabilizedFieldOfView;
+        }
         FirstPersonCamera->SetFieldOfView(FieldOfView);
     }
     UpdateFirstPersonVisibility();
@@ -62,10 +63,8 @@ void UDroneCameraControllerComponent::ResetCameraPose()
     }
 }
 
-void UDroneCameraControllerComponent::TickComponent(
-    float DeltaTime,
-    ELevelTick TickType,
-    FActorComponentTickFunction* ThisTickFunction)
+void UDroneCameraControllerComponent::TickComponent(float DeltaTime, ELevelTick TickType,
+                                                    FActorComponentTickFunction *ThisTickFunction)
 {
     Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
     if (ViewMode == EDroneViewMode::ThirdPerson)
@@ -87,14 +86,12 @@ void UDroneCameraControllerComponent::UpdateCameraPose(float DeltaTime)
 
     const FTransform BodyTransform = DroneBody->GetComponentTransform();
     const FQuat BodyRotation = BodyTransform.GetRotation().GetNormalized();
-    const FVector CameraPosition =
-        BodyTransform.TransformPosition(MountOffsetCentimeters);
+    const FVector CameraPosition = BodyTransform.TransformPosition(MountOffsetCentimeters);
 
     if (ViewMode == EDroneViewMode::BodyLockedFirstPerson)
     {
         const FQuat MountOrientation =
-            MountRotation.Quaternion() *
-            FRotator(BodyLockedUptiltDegrees, 0.0F, 0.0F).Quaternion();
+            MountRotation.Quaternion() * FRotator(BodyLockedUptiltDegrees, 0.0F, 0.0F).Quaternion();
         StabilizedCameraRotation = (BodyRotation * MountOrientation).GetNormalized();
         GimbalAngularVelocityRadiansPerSecond = FVector::ZeroVector;
         bHasCameraPose = true;
@@ -113,8 +110,7 @@ void UDroneCameraControllerComponent::UpdateCameraPose(float DeltaTime)
             float RemainingTime = FMath::Min(DeltaTime, 0.25F);
             while (RemainingTime > 0.0F)
             {
-                const float StepTime = FMath::Min(
-                    RemainingTime, CameraIntegrationStepSeconds);
+                const float StepTime = FMath::Min(RemainingTime, CameraIntegrationStepSeconds);
                 const FQuat RotationError =
                     (TargetRotation * StabilizedCameraRotation.Inverse()).GetNormalized();
                 FVector ErrorAxis;
@@ -133,16 +129,14 @@ void UDroneCameraControllerComponent::UpdateCameraPose(float DeltaTime)
                     break;
                 }
 
-                const float MaximumSpeed = FMath::DegreesToRadians(
-                    MaximumGimbalAngularVelocityDegreesPerSecond);
+                const float MaximumSpeed =
+                    FMath::DegreesToRadians(MaximumGimbalAngularVelocityDegreesPerSecond);
                 const float MaximumAcceleration = FMath::DegreesToRadians(
                     MaximumGimbalAngularAccelerationDegreesPerSecondSquared);
-                const float BrakingSpeed = FMath::Sqrt(
-                    2.0F * MaximumAcceleration * ErrorAngleRadians);
+                const float BrakingSpeed =
+                    FMath::Sqrt(2.0F * MaximumAcceleration * ErrorAngleRadians);
                 const float DesiredSpeed = FMath::Min3(
-                    MaximumSpeed,
-                    ErrorAngleRadians * GimbalResponseSpeed,
-                    BrakingSpeed);
+                    MaximumSpeed, ErrorAngleRadians * GimbalResponseSpeed, BrakingSpeed);
                 const FVector DesiredAngularVelocity = ErrorAxis * DesiredSpeed;
                 GimbalAngularVelocityRadiansPerSecond +=
                     (DesiredAngularVelocity - GimbalAngularVelocityRadiansPerSecond)
@@ -156,76 +150,71 @@ void UDroneCameraControllerComponent::UpdateCameraPose(float DeltaTime)
                 }
                 if (!RotationStep.IsNearlyZero())
                 {
-                    StabilizedCameraRotation = (
-                        FQuat(RotationStep.GetSafeNormal(), RotationStep.Size()) *
-                        StabilizedCameraRotation).GetNormalized();
+                    StabilizedCameraRotation =
+                        (FQuat(RotationStep.GetSafeNormal(), RotationStep.Size()) *
+                         StabilizedCameraRotation)
+                            .GetNormalized();
                 }
                 RemainingTime -= StepTime;
             }
         }
     }
 
-    if (!StabilizedCameraRotation.IsNormalized() ||
-        StabilizedCameraRotation.ContainsNaN() || CameraPosition.ContainsNaN())
+    if (!StabilizedCameraRotation.IsNormalized() || StabilizedCameraRotation.ContainsNaN() ||
+        CameraPosition.ContainsNaN())
     {
-        UE_LOG(LogTemp, Error, TEXT("First-person camera pose became invalid; resetting camera smoothing"));
+        UE_LOG(LogTemp, Error,
+               TEXT("First-person camera pose became invalid; resetting camera smoothing"));
         ResetCameraPose();
         return;
     }
 
-    FirstPersonCamera->SetWorldLocationAndRotation(
-        CameraPosition, StabilizedCameraRotation, false, nullptr, ETeleportType::TeleportPhysics);
+    FirstPersonCamera->SetWorldLocationAndRotation(CameraPosition, StabilizedCameraRotation, false,
+                                                   nullptr, ETeleportType::TeleportPhysics);
 }
 
-FQuat UDroneCameraControllerComponent::GetStabilizedTarget(const FQuat& BodyRotation)
+FQuat UDroneCameraControllerComponent::GetStabilizedTarget(const FQuat &BodyRotation)
 {
-    FVector HorizontalForward =
-        BodyRotation.RotateVector(FVector::ForwardVector);
+    FVector HorizontalForward = BodyRotation.RotateVector(FVector::ForwardVector);
     HorizontalForward.Z = 0.0F;
     if (HorizontalForward.SizeSquared() > MinimumHeadingProjectionSquared)
     {
-        LastStableHeadingDegrees = FMath::RadiansToDegrees(
-            FMath::Atan2(HorizontalForward.Y, HorizontalForward.X));
+        LastStableHeadingDegrees =
+            FMath::RadiansToDegrees(FMath::Atan2(HorizontalForward.Y, HorizontalForward.X));
     }
 
-    const FQuat DesiredWorldRotation = (
-        FRotator(StabilizedPitchDegrees, LastStableHeadingDegrees, 0.0F).Quaternion() *
-        MountRotation.Quaternion()).GetNormalized();
+    const FQuat DesiredWorldRotation =
+        (FRotator(StabilizedPitchDegrees, LastStableHeadingDegrees, 0.0F).Quaternion() *
+         MountRotation.Quaternion())
+            .GetNormalized();
     return LimitGimbalTravel(BodyRotation, DesiredWorldRotation);
 }
 
-FQuat UDroneCameraControllerComponent::LimitGimbalTravel(
-    const FQuat& BodyRotation,
-    const FQuat& DesiredWorldRotation) const
+FQuat UDroneCameraControllerComponent::LimitGimbalTravel(const FQuat &BodyRotation,
+                                                         const FQuat &DesiredWorldRotation) const
 {
-    FRotator RelativeGimbalRotation =
-        (BodyRotation.Inverse() * DesiredWorldRotation).Rotator();
-    RelativeGimbalRotation.Pitch = FMath::Clamp(
-        FRotator::NormalizeAxis(RelativeGimbalRotation.Pitch),
-        MinimumGimbalPitchDegrees,
-        MaximumGimbalPitchDegrees);
-    RelativeGimbalRotation.Roll = FMath::Clamp(
-        FRotator::NormalizeAxis(RelativeGimbalRotation.Roll),
-        -MaximumGimbalRollDegrees,
-        MaximumGimbalRollDegrees);
-    RelativeGimbalRotation.Yaw = FMath::Clamp(
-        FRotator::NormalizeAxis(RelativeGimbalRotation.Yaw),
-        -MaximumGimbalYawDegrees,
-        MaximumGimbalYawDegrees);
+    FRotator RelativeGimbalRotation = (BodyRotation.Inverse() * DesiredWorldRotation).Rotator();
+    RelativeGimbalRotation.Pitch =
+        FMath::Clamp(FRotator::NormalizeAxis(RelativeGimbalRotation.Pitch),
+                     MinimumGimbalPitchDegrees, MaximumGimbalPitchDegrees);
+    RelativeGimbalRotation.Roll = FMath::Clamp(FRotator::NormalizeAxis(RelativeGimbalRotation.Roll),
+                                               -MaximumGimbalRollDegrees, MaximumGimbalRollDegrees);
+    RelativeGimbalRotation.Yaw = FMath::Clamp(FRotator::NormalizeAxis(RelativeGimbalRotation.Yaw),
+                                              -MaximumGimbalYawDegrees, MaximumGimbalYawDegrees);
     return (BodyRotation * RelativeGimbalRotation.Quaternion()).GetNormalized();
 }
 
 void UDroneCameraControllerComponent::UpdateFirstPersonVisibility()
 {
-    AActor* Owner = GetOwner();
+    AActor *Owner = GetOwner();
     if (!Owner)
     {
         return;
     }
 
     const bool bFirstPerson = ViewMode != EDroneViewMode::ThirdPerson;
-    TInlineComponentArray<UPrimitiveComponent*> PrimitiveComponents(Owner);
-    for (UPrimitiveComponent* Primitive : PrimitiveComponents)
+    TInlineComponentArray<UPrimitiveComponent *> PrimitiveComponents(Owner);
+    for (UPrimitiveComponent *Primitive : PrimitiveComponents)
     {
         if (Primitive && Primitive->bOwnerNoSee != bFirstPerson)
         {
@@ -238,17 +227,35 @@ void UDroneCameraControllerComponent::UpdateFirstPersonVisibility()
 void UDroneCameraControllerComponent::AdjustGimbalPitch(float Degrees)
 {
     if (ViewMode == EDroneViewMode::StabilizedFirstPerson)
-        StabilizedPitchDegrees = FMath::Clamp(StabilizedPitchDegrees + Degrees, MinimumGimbalPitchDegrees, MaximumGimbalPitchDegrees);
+    {
+        StabilizedPitchDegrees = FMath::Clamp(StabilizedPitchDegrees + Degrees,
+                                              MinimumGimbalPitchDegrees, MaximumGimbalPitchDegrees);
+    }
 }
+
 void UDroneCameraControllerComponent::AdjustFieldOfView(float Degrees)
 {
-    if (ViewMode == EDroneViewMode::ThirdPerson || !FirstPersonCamera) return;
-    float& Fov = ViewMode == EDroneViewMode::StabilizedFirstPerson ? StabilizedFieldOfView : BodyLockedFieldOfView;
-    Fov = FMath::Clamp(Fov + Degrees, 60.0F, 120.0F);
-    FirstPersonCamera->SetFieldOfView(Fov);
+    if (ViewMode == EDroneViewMode::ThirdPerson || !FirstPersonCamera)
+    {
+        return;
+    }
+    if (ViewMode == EDroneViewMode::StabilizedFirstPerson)
+    {
+        StabilizedFieldOfView = FMath::Clamp(StabilizedFieldOfView + Degrees, 60.0F, 120.0F);
+        FirstPersonCamera->SetFieldOfView(StabilizedFieldOfView);
+    }
+    else
+    {
+        BodyLockedFieldOfView = FMath::Clamp(BodyLockedFieldOfView + Degrees, 60.0F, 120.0F);
+        FirstPersonCamera->SetFieldOfView(BodyLockedFieldOfView);
+    }
 }
+
 void UDroneCameraControllerComponent::RecenterGimbal()
 {
-    if (ViewMode == EDroneViewMode::StabilizedFirstPerson) StabilizedPitchDegrees = 0.0F;
+    if (ViewMode == EDroneViewMode::StabilizedFirstPerson)
+    {
+        StabilizedPitchDegrees = 0.0F;
+    }
     ResetCameraPose();
 }

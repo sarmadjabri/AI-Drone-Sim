@@ -1,0 +1,28 @@
+# New York-style brownstone neighborhood
+
+Publisher: NVIDIA. Source: Architectural Brownstone downloadable OpenUSD pack,
+`AECDemo_NVD@10012`, using its authored Lite landscaping/streets plus the detailed brownstone-row option.
+
+- Official catalog: https://docs.omniverse.nvidia.com/usd/latest/usd_content_samples/downloadable_packs.html
+- Download: https://d4i3qtqj3r0z5.cloudfront.net/AECDemo_NVD%4010012.zip
+- Terms: see `PACKAGE-LICENSES/AECDemo_NVD-license.txt` and the linked NVIDIA
+  Omniverse License Agreement. This is not a CC0 or CC BY asset pack.
+
+This is a New York-style artistic environment, **not a surveyed replica of
+Manhattan**. The authored building/park/street placements are retained. USD
+geometry/materials are converted into native Unreal assets; dense foliage is
+reduced, grass paint instancers are omitted, textures are bounded to 1024 pixels,
+and geometry is spatially batched. The MDL-to-Unreal material approximation
+preserves source base-color textures, matching normal maps, color factors and scalar roughness/metallic;
+it does not reproduce all NVIDIA RTX/MDL effects or translucent interiors.
+
+Raw archives, source trees and conversion intermediates are local import inputs
+and are ignored by Git. The native assets are incorporated into this simulator;
+do not republish the original content pack as a standalone asset collection.
+
+Reproduce with `.venv/bin/python scripts/download_new_york.py`, then
+`prepare_new_york.py`, `prepare_detailed_new_york.py`, `batch_new_york.py`, `optimize_new_york.py`, and run `import_new_york.py` through
+Unreal's Python commandlet. See `DOCUMENTATION.md`, City environment and asset pipeline.
+
+Pinned archive SHA256:
+`c97bec134962ee5ae0f7b1df713656242ae51cf1d6090d2dc832e287cbcbe5a8`.

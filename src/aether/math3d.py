@@ -4,6 +4,7 @@ import numpy as np
 
 
 def multiply(a, b):
+    """Compose scalar-first Hamilton quaternions without silently normalizing inputs."""
     a = np.asarray(a, dtype=float)
     b = np.asarray(b, dtype=float)
     if (
@@ -26,6 +27,7 @@ def multiply(a, b):
 
 
 def rotation(q):
+    """Return a body-to-world rotation matrix after validating quaternion magnitude."""
     q = np.asarray(q, dtype=float)
     if q.shape != (4,) or not np.all(np.isfinite(q)):
         raise ValueError("quaternion must be a finite four-vector")
@@ -43,6 +45,7 @@ def rotation(q):
 
 
 def integrate(q, omega, dt):
+    """Advance orientation with a constant body angular rate in radians/second."""
     q = np.asarray(q, dtype=float)
     omega = np.asarray(omega, dtype=float)
     if (
@@ -55,7 +58,12 @@ def integrate(q, omega, dt):
     if not np.isfinite(dt):
         raise ValueError("dt must be finite")
     angle = np.linalg.norm(omega) * dt
-    vector = omega * (0.5 * dt if angle < 1e-9 else np.sin(angle / 2) * dt / angle)
+    # Use the analytic small-angle limit instead of dividing by zero.
+    if abs(angle) < 1e-09:
+        rotation_scale = 0.5 * dt
+    else:
+        rotation_scale = np.sin(angle / 2) * dt / angle
+    vector = omega * (rotation_scale)
     result = multiply(q, np.r_[np.cos(angle / 2), vector])
     norm = np.linalg.norm(result)
     if norm <= 1e-12:

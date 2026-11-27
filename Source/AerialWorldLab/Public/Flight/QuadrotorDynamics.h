@@ -1,9 +1,11 @@
+// Portable SI rotor allocation, actuator response and aerodynamic force calculations.
 #pragma once
 
 #include <array>
 
 namespace Aether
 {
+    // SI parameters for a plus-layout quadrotor; no Unreal types are required.
     struct DroneParameters
     {
         float massKg = 1.0F;
@@ -27,18 +29,20 @@ namespace Aether
 
     class QuadrotorDynamics final
     {
-    public:
+      public:
         // Motor order: front, right, rear, left (plus configuration).
-        static bool AllocateMotorThrusts(
-            const DesiredWrench& wrench,
-            const DroneParameters& parameters,
-            MotorThrusts& output);
+        static bool AllocateMotorThrusts(const DesiredWrench &wrench,
+                                         const DroneParameters &parameters, MotorThrusts &output);
 
-        static bool UpdateMotorThrusts(
-            const MotorThrusts& current,
-            const MotorThrusts& target,
-            float deltaTimeS,
-            const DroneParameters& parameters,
-            MotorThrusts& output);
+        // Per-axis body drag: F = -0.5 * density * CdA * v * abs(v).
+        // Velocity is relative to the air, not relative to the ground.
+        static bool CalculateBodyDrag(const std::array<float, 3> &airVelocityBodyMps,
+                                      const std::array<float, 3> &dragAreaSquareMeters,
+                                      float airDensityKgPerCubicMeter,
+                                      std::array<float, 3> &forceBodyNewtons);
+
+        static bool UpdateMotorThrusts(const MotorThrusts &current, const MotorThrusts &target,
+                                       float deltaTimeS, const DroneParameters &parameters,
+                                       MotorThrusts &output);
     };
-}
+} // namespace Aether

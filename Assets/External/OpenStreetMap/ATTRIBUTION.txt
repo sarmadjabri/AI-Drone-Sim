@@ -1,0 +1,17 @@
+© OpenStreetMap contributors
+License: Open Database License (ODbL) 1.0
+https://www.openstreetmap.org/copyright
+https://opendatacommons.org/licenses/odbl/1-0/
+
+Source: https://www.openstreetmap.org/api/0.6/map?bbox=-74.009,40.714,-74.005,40.717
+Retrieved: 2026-11-26
+Area: Lower Manhattan, New York City, USA.
+Projection origin: latitude 40.7155, longitude -74.007.
+The raw extract is retained as lower_manhattan.osm.
+Content/CityData/lower_manhattan.json is a derived ODbL database.
+
+Approximation: buildings are axis-aligned envelopes rendered with generic existing
+architecture. Missing height uses building:levels * 3 m or a 9 m default.
+Multipolygon relations, terrain elevation, bridges, tunnels and exact facades are
+not reconstructed. A 20 m launch clearance removes overlapping building envelopes.
+This is a real-map-derived research scene, not a surveyed reconstruction.

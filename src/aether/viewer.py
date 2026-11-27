@@ -206,9 +206,21 @@ def run_viewer(simulation, duration):
                 return np.zeros(3)
             # DualSense mapping for the current position-target controller:
             # left stick x/y -> X/Y motion, right stick y -> Z motion
-            x = float(np.clip(axes[0] if len(axes) > 0 else 0.0, -1.0, 1.0))
-            y = float(np.clip(axes[1] if len(axes) > 1 else 0.0, -1.0, 1.0))
-            z = float(np.clip(-axes[3] if len(axes) > 3 else 0.0, -1.0, 1.0))
+            if len(axes) > 0:
+                horizontal_axis = axes[0]
+            else:
+                horizontal_axis = 0.0
+            x = float(np.clip(horizontal_axis, -1.0, 1.0))
+            if len(axes) > 1:
+                forward_axis = axes[1]
+            else:
+                forward_axis = 0.0
+            y = float(np.clip(forward_axis, -1.0, 1.0))
+            if len(axes) > 3:
+                vertical_axis = -axes[3]
+            else:
+                vertical_axis = 0.0
+            z = float(np.clip(vertical_axis, -1.0, 1.0))
             return np.array([x, -y, z], dtype=float) * 2.0
 
         def _set_key(self, key, value):
@@ -316,13 +328,20 @@ def run_viewer(simulation, duration):
                 focus[2] + distance * math.sin(pitch),
             )
             self.camera.lookAt(Vec3(*focus))
-            status = (
-                "COLLISION"
-                if simulation.collision
-                else ("MISSION COMPLETE" if simulation.completed else "FLYING")
-            )
-            mode = "MANUAL" if self.manual else "AUTONOMOUS"
-            controller_status = "controller" if self.controller is not None else "keyboard"
+            if simulation.collision:
+                status = "COLLISION"
+            elif simulation.completed:
+                status = "MISSION COMPLETE"
+            else:
+                status = "FLYING"
+            if self.manual:
+                mode = "MANUAL"
+            else:
+                mode = "AUTONOMOUS"
+            if self.controller is not None:
+                controller_status = "controller"
+            else:
+                controller_status = "keyboard"
             self.telemetry.setText(
                 f"{status}  |  {mode}  |  {self.elapsed:5.1f}/{self.max_duration:.1f} s"
                 f"  |  {self.time_scale:g}x  |  {controller_status}\n"

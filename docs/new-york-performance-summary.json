@@ -1,0 +1,27 @@
+[
+  {
+    "capture": "Saved/Profiling/CSV/Profile(20261127_094923).csv",
+    "sample_count": 240,
+    "warmup_frames": 120,
+    "FrameTime": {
+      "median_ms": 27.38425,
+      "p95_ms": 32.173285
+    },
+    "GameThreadTime": {
+      "median_ms": 3.183,
+      "p95_ms": 4.18205
+    },
+    "RenderThreadTime": {
+      "median_ms": 2.6555,
+      "p95_ms": 2.9560999999999997
+    },
+    "GPU/Total": {
+      "median_ms": 25.714,
+      "p95_ms": 30.2514
+    },
+    "GPU/ShadowDepths": {
+      "median_ms": 3.529,
+      "p95_ms": 5.985849999999996
+    }
+  }
+]

@@ -1,0 +1,14 @@
+# Known-working direct dependency versions for Python 3.12 setup.
+# Use as pip constraints: python -m pip install -c requirements-setup.txt -e '.[dev,assets]'
+# Optional viewer/learning extras are separate and are not pinned here.
+numpy==2.5.4
+scipy==1.18.1
+requests==2.34.2
+usd-core==26.11
+pillow==13.0.0
+fast-simplification==0.2.0
+remotezip==0.12.6
+pyproj==3.8.0
+pytest==9.2.0
+ruff==0.17.3
+clang-format==19.1.7

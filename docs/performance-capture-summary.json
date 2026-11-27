@@ -1,0 +1,52 @@
+[
+  {
+    "capture": "Saved/Profiling/CSV/Profile(20261126_140427).csv",
+    "sample_count": 240,
+    "warmup_frames": 120,
+    "FrameTime": {
+      "median_ms": 159.55829999999997,
+      "p95_ms": 165.55745
+    },
+    "GameThreadTime": {
+      "median_ms": 2.8440000000000003,
+      "p95_ms": 3.0537499999999995
+    },
+    "RenderThreadTime": {
+      "median_ms": 2.8070000000000004,
+      "p95_ms": 3.1046
+    },
+    "GPU/Total": {
+      "median_ms": 64.983,
+      "p95_ms": 67.9093
+    },
+    "GPU/ShadowDepths": {
+      "median_ms": 29.8125,
+      "p95_ms": 29.86805
+    }
+  },
+  {
+    "capture": "Saved/Profiling/CSV/Profile(20261126_140922).csv",
+    "sample_count": 240,
+    "warmup_frames": 120,
+    "FrameTime": {
+      "median_ms": 20.68205,
+      "p95_ms": 21.749465
+    },
+    "GameThreadTime": {
+      "median_ms": 2.085,
+      "p95_ms": 2.5899499999999995
+    },
+    "RenderThreadTime": {
+      "median_ms": 2.1635,
+      "p95_ms": 2.608
+    },
+    "GPU/Total": {
+      "median_ms": 19.1265,
+      "p95_ms": 19.9965
+    },
+    "GPU/ShadowDepths": {
+      "median_ms": 0.145,
+      "p95_ms": 0.168
+    }
+  }
+]

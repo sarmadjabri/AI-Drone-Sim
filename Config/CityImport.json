@@ -1,0 +1,44 @@
+{
+  "schema_version": 2,
+  "city_id": "new_york_brownstone",
+  "asset_root": "/Game/External/NewYorkBrownstone",
+  "map_path": "/Game/Maps/NewYorkDaytime",
+  "spatial_cell_size_cm": 6400,
+  "maximum_texture_size": 1024,
+  "foliage_draw_distance_cm": 15000,
+  "leaf_triangle_budget_per_prototype": 60000,
+  "wood_triangle_budget_per_prototype": 6000,
+  "architecture_triangle_budget_per_prototype": 12000,
+  "excluded_source_prefixes": [
+    "/World/Props/Kalmar_TblChr"
+  ],
+  "launch_position_cm": [
+    -5900,
+    202,
+    203
+  ],
+  "launch_yaw_degrees": -90,
+  "notes": "Preserve leaf patches and original UVs. The excluded cafe furniture is the pink cone-like set. Change cell size only when intentionally rebuilding the tile grid.",
+  "small_leaf_triangle_budget_per_prototype": 12000,
+  "flower_triangle_budget_per_prototype": 4000,
+  "large_canopy_threshold_cm": 300,
+  "unbound_leaf_color_linear": [
+    0.1,
+    0.3,
+    0.035
+  ],
+  "include_flower_geometry": false,
+  "maximum_nested_instances_per_prototype": 12,
+  "branch_leaf_triangle_budget_per_prototype": 12000,
+  "enabled_paint_tree_species": [
+    "American_Beech",
+    "Largetooth_Aspen"
+  ],
+  "street_tree_meshes": [
+    "trunk",
+    "top",
+    "branches",
+    "branch",
+    "leaves"
+  ]
+}

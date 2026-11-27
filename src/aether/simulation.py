@@ -13,8 +13,15 @@ from .sensors import NavigationSensor
 
 class Simulation:
     def __init__(self, scenario=None, config=None, planner=None):
-        self.scenario = scenario or Scenario()
-        self.config = config or DroneConfig()
+        """Start at hover and synchronize sensor, control and physics clocks."""
+        if scenario is None:
+            self.scenario = Scenario()
+        else:
+            self.scenario = scenario
+        if config is None:
+            self.config = DroneConfig()
+        else:
+            self.config = config
         start = np.array(self.scenario.start, dtype=float)
         self.drone = Quadrotor(self.config, State(position=start))
         self.drone.state.motors[:] = np.sqrt(
@@ -29,8 +36,12 @@ class Simulation:
         self.waypoint_index = 0
         self.completed = not self.scenario.waypoints
         self.collision = False
+        if self.scenario.waypoints:
+            initial_target = self.scenario.waypoints[0]
+        else:
+            initial_target = self.scenario.start
         self.target = np.array(
-            self.scenario.waypoints[0] if self.scenario.waypoints else self.scenario.start,
+            initial_target,
             dtype=float,
         )
         self.command = np.zeros(4)
@@ -41,6 +52,7 @@ class Simulation:
         self.dwell = 0.0
 
     def step(self):
+        """Advance one physics interval; refresh observations only on control boundaries."""
         if self.collision:
             return
         sc = self.scenario
@@ -51,7 +63,10 @@ class Simulation:
             if not self.manual and not self.completed:
                 reached = np.linalg.norm(estimate.position - self.target) < 0.2
                 settled = np.linalg.norm(estimate.velocity) < 0.3
-                self.dwell = self.dwell + sc.control_dt if reached and settled else 0
+                if reached and settled:
+                    self.dwell = self.dwell + sc.control_dt
+                else:
+                    self.dwell = 0
                 if self.dwell >= 0.5:
                     self.waypoint_index += 1
                     self.dwell = 0
@@ -79,6 +94,7 @@ class Simulation:
         self.time = self.steps * sc.dt
 
     def run(self, seconds):
+        """Run a bounded experiment and return measured simulation statistics."""
         if not np.isfinite(seconds) or seconds < 0:
             raise ValueError("simulation duration must be finite and nonnegative")
         started = time.perf_counter()
@@ -87,6 +103,10 @@ class Simulation:
             if self.collision:
                 break
         wall = time.perf_counter() - started
+        if self.planning_ms:
+            planning_mean_ms = float(np.mean(self.planning_ms))
+        else:
+            planning_mean_ms = None
         return {
             "simulated_seconds": self.time,
             "wall_seconds": wall,
@@ -97,5 +117,5 @@ class Simulation:
             "target_error_m": float(np.linalg.norm(self.drone.state.position - self.target)),
             "energy_j": self.drone.state.energy_j,
             "path_length_m": float(np.linalg.norm(np.diff(self.path, axis=0), axis=1).sum()),
-            "planning_mean_ms": float(np.mean(self.planning_ms)) if self.planning_ms else None,
+            "planning_mean_ms": planning_mean_ms,
         }

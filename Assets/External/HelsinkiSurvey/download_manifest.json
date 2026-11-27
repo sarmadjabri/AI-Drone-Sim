@@ -1,0 +1,20 @@
+{
+  "archive": "https://3d.hel.ninja/data/mesh/Helsinki3D-MESH_2017_OBJ_2km-250m_ZIP/Helsinki3D_2017_OBJ_672496x2.zip",
+  "directories": [
+    "672497b2",
+    "672497b4",
+    "672497d2",
+    "673497a1",
+    "673497a3",
+    "673497c1"
+  ],
+  "source_lod": 21,
+  "license": "CC BY 4.0",
+  "publisher": "City of Helsinki",
+  "source_crs": "EPSG:3879+5773",
+  "source_origin": [
+    25490000,
+    6668000,
+    0
+  ]
+}

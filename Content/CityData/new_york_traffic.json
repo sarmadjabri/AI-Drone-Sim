@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "source": "Authored street circuit in NVIDIA Brownstone Lite scene; artistic New York-style layout, not OSM",
+  "units": "Unreal centimeters; X source X, Y negative source Y, Z up; local artistic coordinates",
+  "points_cm": [
+    [-5900, 4500, -17],
+    [-5900, 0, -17],
+    [-5900, -6500, -17],
+    [-7000, -7150, -17],
+    [-13000, -7150, -17],
+    [-13450, -6500, -17],
+    [-13450, 4500, -17],
+    [-13000, 5000, -17],
+    [-7000, 5000, -17]
+  ]
+}
